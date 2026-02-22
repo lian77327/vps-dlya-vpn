@@ -27,8 +27,8 @@
         a:hover{color:var(--green)}
         .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 2rem}
         .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
-        .nav-logo{font-size:1.1rem;font-weight:700;color:#fff}
-        .nav-logo span{color:var(--accent2)}
+        .nav-logo{display:flex;align-items:center}
+        .nav-logo img{height:36px;width:auto}
         .nav-links{display:flex;gap:1.5rem;list-style:none;font-size:.9rem}
         .nav-links a{color:var(--text2)}.nav-links a:hover{color:#fff}
         .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none}
@@ -141,7 +141,6 @@
 <nav class="nav">
     <div class="nav-inner">
         <a href="/" class="nav-logo"><img src="/logo.png.jpg" alt="VPS для VPN" height="36"></a>
-        <div class="nav-logo">VPS <span>для</span> VPN</div>
         <button class="burger" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Меню"><span></span><span></span><span></span></button>
         <ul class="nav-links">
             <li><a href="#rating">Рейтинг</a></li>

@@ -73,7 +73,7 @@
         .card-score{margin:.5rem 0;font-size:.85rem;color:var(--gold)}
         .card-btn{display:inline-block;padding:.5rem 1.2rem;background:var(--accent);color:#fff;border-radius:8px;font-size:.85rem;font-weight:600;transition:background .2s}
         .card-btn:hover{background:#7c6cf0;color:#fff}
-        .promo-code{display:inline-block;margin-top:.5rem;padding:.35rem .8rem;background:rgba(0,230,118,.12);border:1px dashed var(--green);border-radius:8px;font-size:.8rem;font-weight:700;color:var(--green);letter-spacing:.5px}
+        .promo-code{display:inline-block;margin-top:.5rem;padding:.35rem .8rem;background:rgba(0,230,118,.12);border:1px dashed var(--green);border-radius:8px;font-size:.8rem;font-weight:700;color:var(--green);letter-spacing:.5px;max-width:100%;box-sizing:border-box;word-break:break-all}
         .table-wrap{overflow-x:auto;margin-top:2rem;border-radius:16px;border:1px solid var(--border)}
         table{width:100%;border-collapse:collapse;font-size:.85rem}
         th{background:var(--bg3);padding:1rem;text-align:left;font-weight:600;color:var(--accent2);white-space:nowrap}
@@ -158,11 +158,12 @@
         /* ── Conversion Boost CSS ── */
 
         /* Sticky bar */
-        .sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:200;background:linear-gradient(90deg,#1a1a2e,#16213e);border-top:1px solid var(--accent);padding:.75rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;transform:translateY(100%);transition:transform .4s cubic-bezier(.175,.885,.32,1.275);box-shadow:0 -4px 30px rgba(108,92,231,.3)}
+        .sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:200;background:linear-gradient(90deg,#1a1a2e,#16213e);border-top:1px solid var(--accent);padding:.75rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:.75rem;transform:translateY(100%);transition:transform .4s cubic-bezier(.175,.885,.32,1.275);box-shadow:0 -4px 30px rgba(108,92,231,.3);box-sizing:border-box;width:100%}
         .sticky-bar.visible{transform:translateY(0)}
-        .sticky-bar-text{font-size:.9rem;color:var(--text2);flex:1}
+        .sb-short{display:none}
+        .sticky-bar-text{font-size:.9rem;color:var(--text2);flex:1;min-width:0}
         .sticky-bar-text strong{color:#fff}
-        .sticky-bar-btn{display:inline-block;padding:.55rem 1.4rem;background:linear-gradient(135deg,var(--green),#00b894);color:#000!important;border-radius:8px;font-weight:700;font-size:.88rem;white-space:nowrap;transition:transform .2s,box-shadow .2s}
+        .sticky-bar-btn{display:inline-block;padding:.55rem 1.2rem;background:linear-gradient(135deg,var(--green),#00b894);color:#000!important;border-radius:8px;font-weight:700;font-size:.85rem;white-space:nowrap;transition:transform .2s,box-shadow .2s;flex-shrink:0}
         .sticky-bar-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,230,118,.35);color:#000!important}
         .sticky-bar-close{background:none;border:none;color:var(--text2);cursor:pointer;font-size:1.2rem;padding:.2rem .5rem;line-height:1}
         .sticky-bar-close:hover{color:#fff}
@@ -231,8 +232,9 @@
         .cta-ghost:hover{background:rgba(108,92,231,.1);color:#fff}
 
         @media(max-width:640px){
-            .sticky-bar{flex-wrap:wrap;gap:.5rem;padding:.6rem 1rem}
+            .sticky-bar{flex-wrap:nowrap;gap:.5rem;padding:.6rem 1rem}
             .sticky-bar-text{font-size:.8rem}
+            .sb-short{display:none}
             .mid-cta-banner{flex-direction:column;gap:1rem}
             .recommender{padding:1.2rem 1rem}
             .rec-btns{gap:.4rem;flex-direction:column}
@@ -243,8 +245,54 @@
             .social-proof-bar{gap:.8rem;padding:.7rem 1rem}
             .sp-item{font-size:.78rem}
         }
+        /* 480px — маленькие смартфоны */
+        @media(max-width:480px){
+            .sticky-bar{padding:.5rem .75rem;gap:.4rem}
+            .sticky-bar-text{font-size:.76rem}
+            .sticky-bar-btn{padding:.45rem .9rem;font-size:.78rem}
+            .sticky-bar-close{font-size:1rem;padding:.1rem .35rem}
+            .sb-full{display:none}
+            .sb-short{display:inline}
+            .card-btn,.card-btn-primary{font-size:.78rem;padding:.55rem .8rem}
+            .promo-code{font-size:.72rem;padding:.25rem .5rem}
+            .live-chip{font-size:.68rem;padding:.15rem .5rem}
+            .badge-popular,.badge-choice,.badge-cheap,.badge-new{font-size:.67rem;padding:.2rem .55rem}
+            .card-price{font-size:1.2rem}
+            .recommender h3{font-size:.95rem}
+            .mid-cta-banner .mcb-text h3{font-size:.95rem}
+            .mid-cta-banner .mcb-btn{font-size:.82rem;padding:.55rem 1rem}
+            .detail-card{padding:1rem}
+            .spec-row{font-size:.76rem}
+        }
+        /* 360px — узкие смартфоны (Android-стандарт) */
+        @media(max-width:360px){
+            .sticky-bar{padding:.45rem .6rem;gap:.3rem}
+            .sticky-bar-text{font-size:.72rem}
+            .sticky-bar-btn{padding:.4rem .75rem;font-size:.74rem}
+            .card-info h3{font-size:1rem}
+            .card-price{font-size:1.1rem}
+            .section{padding:3rem 1rem}
+            .hero{padding:6rem 1rem 2.5rem}
+            .hero p{font-size:1rem}
+            .trust-badge{font-size:.68rem;padding:.3rem .55rem}
+            .stat{padding:1rem .6rem}
+            .stat-num{font-size:1.4rem}
+        }
+        /* 320px — минимальная поддержка (iPhone SE 1st gen) */
+        @media(max-width:320px){
+            .sticky-bar{padding:.4rem .5rem}
+            .sticky-bar-btn{padding:.38rem .6rem;font-size:.7rem}
+            .sticky-bar-text{font-size:.68rem}
+            .hero h1{font-size:1.4rem}
+            .section-title{font-size:1.25rem}
+            .card-btn,.card-btn-primary{font-size:.74rem;padding:.5rem .6rem}
+            .stats{grid-template-columns:1fr 1fr}
+            .stat-num{font-size:1.2rem}
+            .nav-inner{padding:0 .75rem}
+            .badge-popular,.badge-choice,.badge-cheap,.badge-new{font-size:.62rem;padding:.15rem .45rem}
+        }
 
-        @media(max-width:480px){.hero h1{font-size:1.6rem}.hero{padding:6rem 1rem 3rem}}
+
     </style>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"Article","headline":"VPS для VPN — Рейтинг лучших серверов в 2026 году","description":"Топ-10 провайдеров для аренды виртуального сервера под собственный VPN. VLESS Reality, WireGuard, чистота IP. Сравнение, цены, обзоры.","datePublished":"2026-02-22","dateModified":"2026-02-22","author":{"@type":"Organization","name":"VPS для VPN"},"publisher":{"@type":"Organization","name":"VPS для VPN"}}
@@ -1450,7 +1498,8 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 <!-- Sticky CTA Bar -->
 <div class="sticky-bar" id="stickyBar">
     <div class="sticky-bar-text">
-        🔥 <strong>VDSina</strong> — самая низкая цена: от <strong>150 ₽/мес</strong> &nbsp;·&nbsp; Промокод <strong>VPS30</strong> на AdminVPS −30%
+        <span class="sb-full">🔥 <strong>VDSina</strong> — от <strong>150 ₽/мес</strong> &nbsp;·&nbsp; <strong>VPS30</strong> на AdminVPS −30%</span>
+        <span class="sb-short">🔥 <strong>VDSina</strong> от <strong>150 ₽</strong></span>
     </div>
     <a href="https://www.vdsina.com/?partner=41z19ht4wq95" class="sticky-bar-btn" target="_blank" rel="nofollow">Попробовать →</a>
     <button class="sticky-bar-close" onclick="document.getElementById('stickyBar').style.display='none'" aria-label="Закрыть">✕</button>

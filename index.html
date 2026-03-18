@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+                <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -292,6 +292,12 @@
             .badge-popular,.badge-choice,.badge-cheap,.badge-new{font-size:.62rem;padding:.15rem .45rem}
         }
 
+        /* ── Promo copy button ── */
+        .promo-copy-wrap{display:inline-flex;align-items:center;gap:.4rem;margin-top:.5rem;background:rgba(0,230,118,.12);border:1px dashed var(--green);border-radius:8px;padding:.3rem .5rem .3rem .8rem;max-width:100%;box-sizing:border-box}
+        .promo-copy-wrap .promo-text{font-size:.8rem;font-weight:700;color:var(--green);letter-spacing:.5px;word-break:break-all}
+        .promo-copy-btn{background:rgba(0,230,118,.2);border:1px solid var(--green);color:var(--green);border-radius:6px;padding:.25rem .6rem;font-size:.72rem;font-weight:700;cursor:pointer;transition:all .2s;white-space:nowrap;flex-shrink:0}
+        .promo-copy-btn:hover{background:var(--green);color:#000}
+        .promo-copy-btn.copied{background:var(--green);color:#000}
 
     </style>
     <script type="application/ld+json">
@@ -424,6 +430,7 @@
 
         <div class="rating-list">
 
+            <!-- #1 Fornex -->
             <div class="rating-card gold">
                 <div class="rank">1</div>
                 <div class="card-info">
@@ -440,7 +447,7 @@
                     </div>
                 </div>
                 <div class="card-right">
-                    <div class="card-price">от 7€</div>
+                    <div class="card-price">от $6.34</div>
                     <div class="card-price-label">в месяц</div>
                     <div class="card-score">★★★★☆ 4.6</div>
                     <a href="https://fornex.com/c/ftle5i/ru/virtual-private-servers/" class="card-btn card-btn-primary" target="_blank" rel="nofollow noopener sponsored">Перейти на Fornex →</a>
@@ -448,7 +455,8 @@
                 </div>
             </div>
 
-            <div class="rating-card bronze">
+            <!-- #2 AdminVPS -->
+            <div class="rating-card silver">
                 <div class="rank">2</div>
                 <div class="card-info">
                     <div class="badge-popular">🔥 Популярный выбор</div>
@@ -469,12 +477,89 @@
                     <div class="card-score">★★★★★ 4.9</div>
                     <a href="https://adminvps.ru/vps/vps_russia.php?aff=29893" class="card-btn card-btn-primary" target="_blank" rel="nofollow noopener sponsored">Получить −30% по промокоду →</a>
                     <div class="live-chip">👁 <span id="views-adminvps">312</span> смотрят сейчас</div>
-                    <div class="promo-code">🎁 VPS30 — скидка 30%</div>
+                    <div class="promo-copy-wrap">
+                        <span class="promo-text">🎁 VPS30 — скидка 30%</span>
+                        <button class="promo-copy-btn" onclick="copyPromo('VPS30', this)">Копировать</button>
+                    </div>
                 </div>
             </div>
 
-            <div class="rating-card">
+            <!-- #3 Timeweb Cloud -->
+            <div class="rating-card bronze">
                 <div class="rank">3</div>
+                <div class="card-info">
+                    <h3>Timeweb Cloud</h3>
+                    <p class="card-desc">Крупнейшая российская облачная платформа. Есть предустановленные образы с WireGuard — тоннель поднимается без терминала. Для VLESS Reality придётся ставить 3X-UI вручную, но всё работает стабильно. Техподдержка отвечает за минуты, на русском. IP в Нидерландах бывают подсажены — стоит проверять после активации.</p>
+                    <div class="card-meta">
+                        <span>📍 RU, NL, PL, KZ</span>
+                        <span>💾 NVMe</span>
+                        <span>🌐 Безлимит</span>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag hot">VLESS Reality ✓</span><span class="tag">WireGuard</span><span class="tag">Готовый образ</span><span class="tag">KVM</span><span class="tag">Оплата ₽</span>
+                    </div>
+                </div>
+                <div class="card-right">
+                    <div class="card-price">от 477₽</div>
+                    <div class="card-price-label">в месяц</div>
+                    <div class="card-score">★★★★☆ 4.7</div>
+                    <a href="https://timeweb.cloud/?i=138553" class="card-btn card-btn-primary" target="_blank" rel="nofollow noopener sponsored">Открыть Timeweb Cloud →</a>
+                    <div class="live-chip">👁 <span id="views-timeweb">98</span> смотрят сейчас</div>
+                </div>
+            </div>
+
+            <!-- #4 Aeza -->
+            <div class="rating-card">
+                <div class="rank">4</div>
+                <div class="card-info">
+                    <h3>Aeza</h3>
+                    <p class="card-desc">Мгновенная активация, дата-центры в пяти странах, NVMe-накопители. TUN/TAP включён по умолчанию, KVM-виртуализация — VLESS Reality завелся без единой проблемы. IP-пулы относительно чистые: на нидерландской площадке ChatGPT и основные стриминги работали без блокировок. Принимает карты «Мир», СБП и крипту.</p>
+                    <div class="card-meta">
+                        <span>📍 RU, NL, DE, US, FI</span>
+                        <span>💾 NVMe</span>
+                        <span>🌐 Безлимит</span>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag hot">VLESS Reality ✓</span><span class="tag">WireGuard</span><span class="tag">3X-UI</span><span class="tag">KVM</span><span class="tag">Оплата ₽</span>
+                    </div>
+                </div>
+                <div class="card-right">
+                    <div class="card-price">от 593₽</div>
+                    <div class="card-price-label">в месяц</div>
+                    <div class="card-score">★★★★☆ 4.7</div>
+                    <a href="https://aeza.net/?ref=797084" class="card-btn card-btn-primary" target="_blank" rel="nofollow noopener sponsored">Попробовать Aeza →</a>
+                    <div class="live-chip">👁 <span id="views-aeza">73</span> смотрят сейчас</div>
+                </div>
+            </div>
+
+            <!-- #5 VDSina -->
+            <div class="rating-card">
+                <div class="rank">5</div>
+                <div class="card-info">
+                    <div class="badge-cheap">💰 Лучшая цена в ₽</div>
+                    <h3>VDSina</h3>
+                    <p class="card-desc">Почасовая тарификация — удобно, если машина нужна временно или для экспериментов. Быстрая активация, интуитивная панель. На нидерландских площадках IP-адреса в целом чистые. Неплохой вариант, чтобы потестировать настройку тоннеля без долгосрочных обязательств. Принимает рубли и криптовалюту.</p>
+                    <div class="card-meta">
+                        <span>📍 RU, NL</span>
+                        <span>💾 NVMe</span>
+                        <span>🌐 Безлимит</span>
+                    </div>
+                    <div class="card-tags">
+                        <span class="tag hot">VLESS Reality ✓</span><span class="tag">WireGuard</span><span class="tag">Почасовая оплата</span><span class="tag">Оплата ₽</span>
+                    </div>
+                </div>
+                <div class="card-right">
+                    <div class="card-price">от 150₽</div>
+                    <div class="card-price-label">в месяц</div>
+                    <div class="card-score">★★★★★ 4.8</div>
+                    <a href="https://www.vdsina.com/?partner=41z19ht4wq95" class="card-btn card-btn-primary card-btn-green" target="_blank" rel="nofollow noopener sponsored">Попробовать за 5 ₽/день →</a>
+                    <div class="live-chip">👁 <span id="views-vdsina">184</span> смотрят сейчас</div>
+                </div>
+            </div>
+
+            <!-- #6 FirstVDS -->
+            <div class="rating-card">
+                <div class="rank">6</div>
                 <div class="card-info">
                     <div class="badge-new">👶 Идеально для новичков</div>
                     <h3>FirstVDS</h3>
@@ -498,74 +583,7 @@
                 </div>
             </div>
 
-            <div class="rating-card">
-                <div class="rank">4</div>
-                <div class="card-info">
-                    <h3>Timeweb Cloud</h3>
-                    <p class="card-desc">Крупнейшая российская облачная платформа. Есть предустановленные образы с WireGuard — тоннель поднимается без терминала. Для VLESS Reality придётся ставить 3X-UI вручную, но всё работает стабильно. Техподдержка отвечает за минуты, на русском. IP в Нидерландах бывают подсажены — стоит проверять после активации.</p>
-                    <div class="card-meta">
-                        <span>📍 RU, NL, PL, KZ</span>
-                        <span>💾 NVMe</span>
-                        <span>🌐 Безлимит</span>
-                    </div>
-                    <div class="card-tags">
-                        <span class="tag hot">VLESS Reality ✓</span><span class="tag">WireGuard</span><span class="tag">Готовый образ</span><span class="tag">KVM</span><span class="tag">Оплата ₽</span>
-                    </div>
-                </div>
-                <div class="card-right">
-                    <div class="card-price">от 477₽</div>
-                    <div class="card-price-label">в месяц</div>
-                    <div class="card-score">★★★★☆ 4.7</div>
-                    <a href="https://timeweb.cloud/?i=138553" class="card-btn card-btn-primary" target="_blank" rel="nofollow noopener sponsored">Открыть Timeweb Cloud →</a>
-                    <div class="live-chip">👁 <span id="views-timeweb">98</span> смотрят сейчас</div>
-                </div>
-            </div>
-
-            <div class="rating-card">
-                <div class="rank">5</div>
-                <div class="card-info">
-                    <h3>Aeza</h3>
-                    <p class="card-desc">Мгновенная активация, дата-центры в пяти странах, NVMe-накопители. TUN/TAP включён по умолчанию, KVM-виртуализация — VLESS Reality завелся без единой проблемы. IP-пулы относительно чистые: на нидерландской площадке ChatGPT и основные стриминги работали без блокировок. Принимает карты «Мир», СБП и крипту.</p>
-                    <div class="card-meta">
-                        <span>📍 RU, NL, DE, US, FI</span>
-                        <span>💾 NVMe</span>
-                        <span>🌐 Безлимит</span>
-                    </div>
-                    <div class="card-tags">
-                        <span class="tag hot">VLESS Reality ✓</span><span class="tag">WireGuard</span><span class="tag">3X-UI</span><span class="tag">KVM</span><span class="tag">Оплата ₽</span>
-                    </div>
-                </div>
-                <div class="card-right">
-                    <div class="card-price">от 593₽</div>
-                    <div class="card-price-label">в месяц</div>
-                    <div class="card-score">★★★★☆ 4.7</div>
-                    <a href="https://aeza.net/?ref=797084" class="card-btn card-btn-primary" target="_blank" rel="nofollow noopener sponsored">Попробовать Aeza →</a>
-                    <div class="live-chip">👁 <span id="views-aeza">73</span> смотрят сейчас</div>
-                </div>
-            </div>
-<div class="rating-card silver">
-                <div class="rank">6</div>
-                <div class="card-info">
-                    <div class="badge-cheap">💰 Лучшая цена в ₽</div>
-                    <h3>VDSina</h3>
-                    <p class="card-desc">Почасовая тарификация — удобно, если машина нужна временно или для экспериментов. Быстрая активация, интуитивная панель. На нидерландских площадках IP-адреса в целом чистые. Неплохой вариант, чтобы потестировать настройку тоннеля без долгосрочных обязательств. Принимает рубли и криптовалюту.</p>
-                    <div class="card-meta">
-                        <span>📍 RU, NL</span>
-                        <span>💾 NVMe</span>
-                        <span>🌐 Безлимит</span>
-                    </div>
-                    <div class="card-tags">
-                        <span class="tag hot">VLESS Reality ✓</span><span class="tag">WireGuard</span><span class="tag">Почасовая оплата</span><span class="tag">Оплата ₽</span>
-                    </div>
-                </div>
-                <div class="card-right">
-                    <div class="card-price">от 150₽</div>
-                    <div class="card-price-label">в месяц</div>
-                    <div class="card-score">★★★★★ 4.8</div>
-                    <a href="https://www.vdsina.com/?partner=41z19ht4wq95" class="card-btn card-btn-primary card-btn-green" target="_blank" rel="nofollow noopener sponsored">Попробовать за 5 ₽/день →</a>
-                    <div class="live-chip">👁 <span id="views-vdsina">184</span> смотрят сейчас</div>
-                </div>
-            </div>
+            <!-- #7 Hetzner -->
             <div class="rating-card">
                 <div class="rank">7</div>
                 <div class="card-info">
@@ -588,6 +606,7 @@
                 </div>
             </div>
 
+            <!-- #8 Contabo -->
             <div class="rating-card">
                 <div class="rank">8</div>
                 <div class="card-info">
@@ -610,6 +629,7 @@
                 </div>
             </div>
 
+            <!-- #9 Vultr -->
             <div class="rating-card">
                 <div class="rank">9</div>
                 <div class="card-info">
@@ -632,6 +652,7 @@
                 </div>
             </div>
 
+            <!-- #10 DigitalOcean -->
             <div class="rating-card">
                 <div class="rank">10</div>
                 <div class="card-info">
@@ -658,7 +679,7 @@
     </div>
 </section>
 
-<!-- COMPARE -->
+<!-- DETAIL COMPARE -->
 <section class="section" id="detail-compare" style="background:var(--bg2)">
     <div class="container">
         <h2 class="section-title">Подробное сравнение 6 провайдеров</h2>
@@ -667,12 +688,12 @@
         <!-- Provider cards grid -->
         <div class="detail-grid">
 
-            <!-- Fornex -->
+            <!-- #1 Fornex -->
             <div class="detail-card detail-gold">
                 <div class="detail-header">
                     <span class="detail-rank">🥇 #1</span>
                     <span class="detail-name">Fornex</span>
-                    <span class="detail-price">от 7 €/мес</span>
+                    <span class="detail-price">от $6.34/мес</span>
                 </div>
                 <div class="detail-specs">
                     <div class="spec-row">
@@ -705,7 +726,7 @@
                     </div>
                     <div class="spec-row">
                         <span class="spec-label">💰 Оплата</span>
-                        <span class="spec-value">€ (карта, криптовалюта)</span>
+                        <span class="spec-value">$ (карта, криптовалюта)</span>
                     </div>
                 </div>
                 <div class="detail-pros-cons">
@@ -719,7 +740,7 @@
                     </div>
                     <div class="detail-cons">
                         <div class="dpc-title">❌ Минусы</div>
-                        <p>Цена в евро</p>
+                        <p>Цена в долларах</p>
                         <p>Нет оплаты в рублях</p>
                         <p>Тест 4 дня (после оплаты)</p>
                     </div>
@@ -727,8 +748,8 @@
                 <a href="https://fornex.com/c/ftle5i/ru/virtual-private-servers/" class="detail-btn" target="_blank" rel="nofollow">Перейти на Fornex →</a>
             </div>
 
-            <!-- AdminVPS -->
-            <div class="detail-card detail-bronze">
+            <!-- #2 AdminVPS -->
+            <div class="detail-card detail-silver">
                 <div class="detail-header">
                     <span class="detail-rank">🥈 #2</span>
                     <span class="detail-name">AdminVPS</span>
@@ -784,15 +805,195 @@
                     </div>
                 </div>
                 <div style="margin-bottom:.5rem">
-                    <span class="promo-code">VPS30 −30%</span>
+                    <div class="promo-copy-wrap">
+                        <span class="promo-text">VPS30 −30%</span>
+                        <button class="promo-copy-btn" onclick="copyPromo('VPS30', this)">Копировать</button>
+                    </div>
                 </div>
                 <a href="https://adminvps.ru/vps/vps_russia.php?aff=29893" class="detail-btn" target="_blank" rel="nofollow">Перейти на AdminVPS →</a>
             </div>
 
-            <!-- FirstVDS -->
-            <div class="detail-card">
+            <!-- #3 Timeweb Cloud -->
+            <div class="detail-card detail-bronze">
                 <div class="detail-header">
                     <span class="detail-rank">🥉 #3</span>
+                    <span class="detail-name">Timeweb Cloud</span>
+                    <span class="detail-price">от 477 ₽/мес</span>
+                </div>
+                <div class="detail-specs">
+                    <div class="spec-row">
+                        <span class="spec-label">⚙️ CPU</span>
+                        <span class="spec-value">1 vCPU × 3.3 GHz</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">🧠 RAM</span>
+                        <span class="spec-value">1 ГБ DDR4</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">💾 Диск</span>
+                        <span class="spec-value">15 ГБ SSD</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">🌐 Трафик</span>
+                        <span class="spec-value">Безлимит (до 1 Гбит/с)</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">📍 Локации</span>
+                        <span class="spec-value">RU (Москва), NL, PL, KZ</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">🛡️ DDoS</span>
+                        <span class="spec-value">Включена</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">🔧 Виртуализация</span>
+                        <span class="spec-value">KVM</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">💰 Оплата</span>
+                        <span class="spec-value">₽, карта, СБП</span>
+                    </div>
+                </div>
+                <div class="detail-pros-cons">
+                    <div class="detail-pros">
+                        <div class="dpc-title">✅ Плюсы</div>
+                        <p>Известный российский бренд</p>
+                        <p>Безлимитный трафик</p>
+                        <p>Удобная панель управления</p>
+                        <p>Оплата через СБП</p>
+                    </div>
+                    <div class="detail-cons">
+                        <div class="dpc-title">❌ Минусы</div>
+                        <p>Цена выше конкурентов</p>
+                        <p>Средняя чистота IP</p>
+                        <p>Мало зарубежных локаций</p>
+                    </div>
+                </div>
+                <a href="https://timeweb.cloud/?i=138553" class="detail-btn" target="_blank" rel="nofollow">Перейти на Timeweb Cloud →</a>
+            </div>
+
+            <!-- #4 Aeza -->
+            <div class="detail-card">
+                <div class="detail-header">
+                    <span class="detail-rank">#4</span>
+                    <span class="detail-name">Aeza</span>
+                    <span class="detail-price">от 593 ₽/мес</span>
+                </div>
+                <div class="detail-specs">
+                    <div class="spec-row">
+                        <span class="spec-label">⚙️ CPU</span>
+                        <span class="spec-value">1 vCPU (AMD Ryzen 9 9950X)</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">🧠 RAM</span>
+                        <span class="spec-value">1 ГБ DDR5</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">💾 Диск</span>
+                        <span class="spec-value">10 ГБ NVMe SSD</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">🌐 Трафик</span>
+                        <span class="spec-value">Безлимит (до 25 Гбит/с)</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">📍 Локации</span>
+                        <span class="spec-value">RU, NL, DE, FI, US, UK</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">🛡️ DDoS</span>
+                        <span class="spec-value">Включена</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">🔧 Виртуализация</span>
+                        <span class="spec-value">KVM</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">💰 Оплата</span>
+                        <span class="spec-value">₽, €, криптовалюта</span>
+                    </div>
+                </div>
+                <div class="detail-pros-cons">
+                    <div class="detail-pros">
+                        <div class="dpc-title">✅ Плюсы</div>
+                        <p>Топовый AMD Ryzen 9950X</p>
+                        <p>Скорость до 25 Гбит/с</p>
+                        <p>Почасовая оплата</p>
+                        <p>Много локаций</p>
+                        <p>DDR5 память</p>
+                    </div>
+                    <div class="detail-cons">
+                        <div class="dpc-title">❌ Минусы</div>
+                        <p>Самая высокая цена</p>
+                        <p>Смешанные отзывы</p>
+                    </div>
+                </div>
+                <a href="https://aeza.net/?ref=797084" class="detail-btn" target="_blank" rel="nofollow">Перейти на Aeza →</a>
+            </div>
+
+            <!-- #5 VDSina -->
+            <div class="detail-card">
+                <div class="detail-header">
+                    <span class="detail-rank">#5</span>
+                    <span class="detail-name">VDSina</span>
+                    <span class="detail-price">от 150 ₽/мес</span>
+                </div>
+                <div class="detail-specs">
+                    <div class="spec-row">
+                        <span class="spec-label">⚙️ CPU</span>
+                        <span class="spec-value">1 ядро × 2.0 GHz</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">🧠 RAM</span>
+                        <span class="spec-value">1 ГБ DDR4</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">💾 Диск</span>
+                        <span class="spec-value">10 ГБ NVMe SSD</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">🌐 Трафик</span>
+                        <span class="spec-value">1 ТБ/мес (1 Гбит/с)</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">📍 Локации</span>
+                        <span class="spec-value">RU (Москва), NL</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">🛡️ DDoS</span>
+                        <span class="spec-value">Включена</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">🔧 Виртуализация</span>
+                        <span class="spec-value">KVM</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">💰 Оплата</span>
+                        <span class="spec-value">₽, карта, криптовалюта</span>
+                    </div>
+                </div>
+                <div class="detail-pros-cons">
+                    <div class="detail-pros">
+                        <div class="dpc-title">✅ Плюсы</div>
+                        <p>Самая низкая цена в ₽</p>
+                        <p>Посуточная оплата (5 ₽/день)</p>
+                        <p>Скидка 10–20% за предоплату</p>
+                        <p>Хорошая чистота IP</p>
+                    </div>
+                    <div class="detail-cons">
+                        <div class="dpc-title">❌ Минусы</div>
+                        <p>Только 1 ТБ трафика</p>
+                        <p>Мало локаций</p>
+                        <p>CPU 2.0 GHz (медленнее)</p>
+                    </div>
+                </div>
+                <a href="https://www.vdsina.com/?partner=41z19ht4wq95" class="detail-btn" target="_blank" rel="nofollow">Перейти на VDSina →</a>
+            </div>
+
+            <!-- #6 FirstVDS -->
+            <div class="detail-card">
+                <div class="detail-header">
+                    <span class="detail-rank">#6</span>
                     <span class="detail-name">FirstVDS</span>
                     <span class="detail-price">от 219 ₽/мес</span>
                 </div>
@@ -850,182 +1051,6 @@
                 </div>
                 <a href="https://firstvds.ru/?from=60396" class="detail-btn" target="_blank" rel="nofollow">Перейти на FirstVDS →</a>
             </div>
-
-            <!-- Timeweb Cloud -->
-            <div class="detail-card">
-                <div class="detail-header">
-                    <span class="detail-rank">#4</span>
-                    <span class="detail-name">Timeweb Cloud</span>
-                    <span class="detail-price">от 477 ₽/мес</span>
-                </div>
-                <div class="detail-specs">
-                    <div class="spec-row">
-                        <span class="spec-label">⚙️ CPU</span>
-                        <span class="spec-value">1 vCPU × 3.3 GHz</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🧠 RAM</span>
-                        <span class="spec-value">1 ГБ DDR4</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">💾 Диск</span>
-                        <span class="spec-value">15 ГБ SSD</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🌐 Трафик</span>
-                        <span class="spec-value">Безлимит (до 1 Гбит/с)</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">📍 Локации</span>
-                        <span class="spec-value">RU (Москва), NL, PL, KZ</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🛡️ DDoS</span>
-                        <span class="spec-value">Включена</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🔧 Виртуализация</span>
-                        <span class="spec-value">KVM</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">💰 Оплата</span>
-                        <span class="spec-value">₽, карта, СБП</span>
-                    </div>
-                </div>
-                <div class="detail-pros-cons">
-                    <div class="detail-pros">
-                        <div class="dpc-title">✅ Плюсы</div>
-                        <p>Известный российский бренд</p>
-                        <p>Безлимитный трафик</p>
-                        <p>Удобная панель управления</p>
-                        <p>Оплата через СБП</p>
-                    </div>
-                    <div class="detail-cons">
-                        <div class="dpc-title">❌ Минусы</div>
-                        <p>Цена выше конкурентов</p>
-                        <p>Средняя чистота IP</p>
-                        <p>Мало зарубежных локаций</p>
-                    </div>
-                </div>
-                <a href="https://timeweb.cloud/?i=138553" class="detail-btn" target="_blank" rel="nofollow">Перейти на Timeweb Cloud →</a>
-            </div>
-
-            <!-- Aeza -->
-            <div class="detail-card">
-                <div class="detail-header">
-                    <span class="detail-rank">#5</span>
-                    <span class="detail-name">Aeza</span>
-                    <span class="detail-price">от 593 ₽/мес</span>
-                </div>
-                <div class="detail-specs">
-                    <div class="spec-row">
-                        <span class="spec-label">⚙️ CPU</span>
-                        <span class="spec-value">1 vCPU (AMD Ryzen 9 9950X)</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🧠 RAM</span>
-                        <span class="spec-value">1 ГБ DDR5</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">💾 Диск</span>
-                        <span class="spec-value">10 ГБ NVMe SSD</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🌐 Трафик</span>
-                        <span class="spec-value">Безлимит (до 25 Гбит/с)</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">📍 Локации</span>
-                        <span class="spec-value">RU, NL, DE, FI, US, UK</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🛡️ DDoS</span>
-                        <span class="spec-value">Включена</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🔧 Виртуализация</span>
-                        <span class="spec-value">KVM</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">💰 Оплата</span>
-                        <span class="spec-value">₽, €, криптовалюта</span>
-                    </div>
-                </div>
-                <div class="detail-pros-cons">
-                    <div class="detail-pros">
-                        <div class="dpc-title">✅ Плюсы</div>
-                        <p>Топовый AMD Ryzen 9950X</p>
-                        <p>Скорость до 25 Гбит/с</p>
-                        <p>Почасовая оплата</p>
-                        <p>Много локаций</p>
-                        <p>DDR5 память</p>
-                    </div>
-                    <div class="detail-cons">
-                        <div class="dpc-title">❌ Минусы</div>
-                        <p>Самая высокая цена</p>
-                        <p>Смешанные отзывы</p>
-                    </div>
-                </div>
-                <a href="https://aeza.net/?ref=797084" class="detail-btn" target="_blank" rel="nofollow">Перейти на Aeza →</a>
-            </div>
- <!-- VDSina -->
-            <div class="detail-card detail-silver">
-                <div class="detail-header">
-                    <span class="detail-rank">#6</span>
-                    <span class="detail-name">VDSina</span>
-                    <span class="detail-price">от 150 ₽/мес</span>
-                </div>
-                <div class="detail-specs">
-                    <div class="spec-row">
-                        <span class="spec-label">⚙️ CPU</span>
-                        <span class="spec-value">1 ядро × 2.0 GHz</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🧠 RAM</span>
-                        <span class="spec-value">1 ГБ DDR4</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">💾 Диск</span>
-                        <span class="spec-value">10 ГБ NVMe SSD</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🌐 Трафик</span>
-                        <span class="spec-value">1 ТБ/мес (1 Гбит/с)</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">📍 Локации</span>
-                        <span class="spec-value">RU (Москва), NL</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🛡️ DDoS</span>
-                        <span class="spec-value">Включена</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🔧 Виртуализация</span>
-                        <span class="spec-value">KVM</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">💰 Оплата</span>
-                        <span class="spec-value">₽, карта, криптовалюта</span>
-                    </div>
-                </div>
-                <div class="detail-pros-cons">
-                    <div class="detail-pros">
-                        <div class="dpc-title">✅ Плюсы</div>
-                        <p>Самая низкая цена в ₽</p>
-                        <p>Посуточная оплата (5 ₽/день)</p>
-                        <p>Скидка 10–20% за предоплату</p>
-                        <p>Хорошая чистота IP</p>
-                    </div>
-                    <div class="detail-cons">
-                        <div class="dpc-title">❌ Минусы</div>
-                        <p>Только 1 ТБ трафика</p>
-                        <p>Мало локаций</p>
-                        <p>CPU 2.0 GHz (медленнее)</p>
-                    </div>
-                </div>
-                <a href="https://www.vdsina.com/?partner=41z19ht4wq95" class="detail-btn" target="_blank" rel="nofollow">Перейти на VDSina →</a>
-            </div>
         </div>
 
         <!-- Summary table -->
@@ -1050,7 +1075,7 @@
                     <tr style="background:rgba(255,215,0,.05)">
                         <td>🥇 1</td>
                         <td><strong>Fornex</strong></td>
-                        <td><span style="color:var(--green);font-weight:700">7 €</span></td>
+                        <td><span style="color:var(--green);font-weight:700">$6.34</span></td>
                         <td>1 × 3.0 GHz</td>
                         <td>1 ГБ</td>
                         <td>10 ГБ NVMe</td>
@@ -1061,20 +1086,8 @@
                     </tr>
                     <tr style="background:rgba(192,192,192,.05)">
                         <td>🥈 2</td>
-                        <td><strong>VDSina</strong></td>
-                        <td><span style="color:var(--green);font-weight:700">150 ₽</span></td>
-                        <td>1 × 2.0 GHz</td>
-                        <td>1 ГБ</td>
-                        <td>10 ГБ NVMe</td>
-                        <td>1 ТБ</td>
-                        <td>RU, NL</td>
-                        <td>Включена</td>
-                        <td>KVM</td>
-                    </tr>
-                    <tr style="background:rgba(205,127,50,.05)">
-                        <td>🥉 3</td>
                         <td><strong>AdminVPS</strong> <span class="table-promo">VPS30 −30%</span></td>
-                        <td><span style="color:var(--gold);font-weight:700">299 ₽</span></td>
+                        <td><span style="color:var(--green);font-weight:700">299 ₽</span></td>
                         <td>1 × 3.6 GHz</td>
                         <td>1 ГБ</td>
                         <td>15 ГБ NVMe</td>
@@ -1083,22 +1096,10 @@
                         <td>до 100 Гбит/с</td>
                         <td>KVM</td>
                     </tr>
-                    <tr>
-                        <td>4</td>
-                        <td><strong>FirstVDS</strong> <span class="table-promo">64860396</span></td>
-                        <td>219 ₽</td>
-                        <td>1 vCPU</td>
-                        <td>1 ГБ</td>
-                        <td>30 ГБ NVMe</td>
-                        <td>Безлимит</td>
-                        <td>RU, NL</td>
-                        <td>Включена</td>
-                        <td>KVM</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
+                    <tr style="background:rgba(205,127,50,.05)">
+                        <td>🥉 3</td>
                         <td><strong>Timeweb Cloud</strong></td>
-                        <td>477 ₽</td>
+                        <td><span style="color:var(--gold);font-weight:700">477 ₽</span></td>
                         <td>1 × 3.3 GHz</td>
                         <td>1 ГБ</td>
                         <td>15 ГБ SSD</td>
@@ -1108,7 +1109,7 @@
                         <td>KVM</td>
                     </tr>
                     <tr>
-                        <td>6</td>
+                        <td>4</td>
                         <td><strong>Aeza</strong></td>
                         <td>593 ₽</td>
                         <td>1 × AMD Ryzen 9950X</td>
@@ -1116,6 +1117,30 @@
                         <td>10 ГБ NVMe</td>
                         <td>Безлимит</td>
                         <td>RU, NL, DE, FI, US, UK</td>
+                        <td>Включена</td>
+                        <td>KVM</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><strong>VDSina</strong></td>
+                        <td>150 ₽</td>
+                        <td>1 × 2.0 GHz</td>
+                        <td>1 ГБ</td>
+                        <td>10 ГБ NVMe</td>
+                        <td>1 ТБ</td>
+                        <td>RU, NL</td>
+                        <td>Включена</td>
+                        <td>KVM</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><strong>FirstVDS</strong> <span class="table-promo">64860396</span></td>
+                        <td>219 ₽</td>
+                        <td>1 vCPU</td>
+                        <td>1 ГБ</td>
+                        <td>30 ГБ NVMe</td>
+                        <td>Безлимит</td>
+                        <td>RU, NL</td>
                         <td>Включена</td>
                         <td>KVM</td>
                     </tr>
@@ -1134,12 +1159,12 @@
             <table>
                 <thead><tr><th>#</th><th>Провайдер</th><th>Цена от</th><th>CPU</th><th>RAM</th><th>Диск</th><th>Трафик</th><th>Локации</th><th>VLESS Reality</th><th>Чистота IP</th><th>₽</th></tr></thead>
                 <tbody>
-                    <tr><td>1</td><td>Fornex</td><td>7€</td><td>1</td><td>512 МБ</td><td>10 ГБ</td><td>Безлимит</td><td>NL, DE, US, LV</td><td>✅</td><td>🟢 Хорошая</td><td>✅</td></tr>
-                    <tr><td>2</td><td>VDSina</td><td>150₽</td><td>1</td><td>512 МБ</td><td>10 ГБ</td><td>Безлимит</td><td>RU, NL</td><td>✅</td><td>🟢 Хорошая</td><td>✅</td></tr>
-                    <tr><td>3</td><td>AdminVPS <span class="table-promo">VPS30 −30%</span></td><td>299₽</td><td>1</td><td>512 МБ</td><td>5 ГБ</td><td>Безлимит</td><td>RU, NL, DE</td><td>✅</td><td>🟡 Средняя</td><td>✅</td></tr>
-                    <tr><td>4</td><td>FirstVDS <span class="table-promo">64860396</span></td><td>219₽</td><td>1</td><td>512 МБ</td><td>10 ГБ</td><td>Безлимит</td><td>RU, NL</td><td>—</td><td>🟢 Хорошая</td><td>✅</td></tr>
-                    <tr><td>5</td><td>Timeweb Cloud</td><td>477₽</td><td>1</td><td>1 ГБ</td><td>15 ГБ</td><td>Безлимит</td><td>RU, NL, PL, KZ</td><td>✅</td><td>🟡 Средняя</td><td>✅</td></tr>
-                    <tr><td>6</td><td>Aeza</td><td>593₽</td><td>1</td><td>512 МБ</td><td>10 ГБ</td><td>Безлимит</td><td>RU, NL, DE, US, FI</td><td>✅</td><td>🟢 Хорошая</td><td>✅</td></tr>
+                    <tr><td>1</td><td>Fornex</td><td>$6.34</td><td>1</td><td>512 МБ</td><td>10 ГБ</td><td>Безлимит</td><td>NL, DE, US, LV</td><td>✅</td><td>🟢 Хорошая</td><td>✅</td></tr>
+                    <tr><td>2</td><td>AdminVPS <span class="table-promo">VPS30 −30%</span></td><td>299₽</td><td>1</td><td>512 МБ</td><td>5 ГБ</td><td>Безлимит</td><td>RU, NL, DE</td><td>✅</td><td>🟡 Средняя</td><td>✅</td></tr>
+                    <tr><td>3</td><td>Timeweb Cloud</td><td>477₽</td><td>1</td><td>1 ГБ</td><td>15 ГБ</td><td>Безлимит</td><td>RU, NL, PL, KZ</td><td>✅</td><td>🟡 Средняя</td><td>✅</td></tr>
+                    <tr><td>4</td><td>Aeza</td><td>593₽</td><td>1</td><td>512 МБ</td><td>10 ГБ</td><td>Безлимит</td><td>RU, NL, DE, US, FI</td><td>✅</td><td>🟢 Хорошая</td><td>✅</td></tr>
+                    <tr><td>5</td><td>VDSina</td><td>150₽</td><td>1</td><td>512 МБ</td><td>10 ГБ</td><td>Безлимит</td><td>RU, NL</td><td>✅</td><td>🟢 Хорошая</td><td>✅</td></tr>
+                    <tr><td>6</td><td>FirstVDS <span class="table-promo">64860396</span></td><td>219₽</td><td>1</td><td>512 МБ</td><td>10 ГБ</td><td>Безлимит</td><td>RU, NL</td><td>—</td><td>🟢 Хорошая</td><td>✅</td></tr>
                     <tr><td>7</td><td>Hetzner</td><td>3.29€</td><td>1</td><td>1 ГБ</td><td>20 ГБ</td><td>20 ТБ</td><td>DE, FI, US, SG</td><td>✅</td><td>🔴 Часто в ЧС</td><td>❌</td></tr>
                     <tr><td>8</td><td>Contabo</td><td>4.50€</td><td>4</td><td>8 ГБ</td><td>50 ГБ</td><td>32 ТБ</td><td>DE, US, JP, SG, AU</td><td>✅</td><td>🟡 Средняя</td><td>❌</td></tr>
                     <tr><td>9</td><td>Vultr</td><td>$3.50</td><td>1</td><td>512 МБ</td><td>10 ГБ</td><td>0.5 ТБ</td><td>30+ стран</td><td>✅</td><td>🟡 Лотерея*</td><td>❌</td></tr>
@@ -1260,7 +1285,7 @@
                 <p>→ Полный контроль над данными и логами</p>
                 <p>→ Уникальный IP — нет массовых блокировок</p>
                 <p>→ Дешевле: от 99₽ vs 300–700₽ за подписку</p>
-                <p>→ Доступ для семьи и друзей бесплатно</p>
+																<p>→ Доступ для семьи и друзей бесплатно</p>
                 <p>→ VLESS Reality работает, когда всё остальное лежит</p>
                 <p>→ Можно разместить Pi-hole, Adguard и другие утилиты</p>
                 <p>→ Нет зависимости от политики третьих лиц</p>
@@ -1416,7 +1441,7 @@
         <h2>Поднимите свой VPN за 10 минут</h2>
         <p>Арендуйте сервер, установите 3X-UI одной командой, подключите телефон по QR-коду. Никаких посредников, никаких логов.</p>
         <div class="cta-buttons" style="margin-bottom:1.5rem">
-            <a href="https://fornex.com/c/ftle5i/ru/virtual-private-servers/" class="hero-cta" target="_blank" rel="nofollow">⭐ Fornex — от 7€</a>
+            <a href="https://fornex.com/c/ftle5i/ru/virtual-private-servers/" class="hero-cta" target="_blank" rel="nofollow">⭐ Fornex — от $6.34</a>
             <a href="https://www.vdsina.com/?partner=41z19ht4wq95" class="hero-cta" style="background:linear-gradient(135deg,var(--green),#00b894);color:#000" target="_blank" rel="nofollow">💰 VDSina — от 150₽</a>
         </div>
         <p style="font-size:.8rem;color:var(--text2)">Промокод <strong style="color:var(--green)">VPS30</strong> даёт −30% на AdminVPS · <strong style="color:var(--green)">64860396</strong> — скидка на FirstVDS</p>
@@ -1430,6 +1455,32 @@
 </footer>
 
 <script>
+// ── Copy promo code ──
+function copyPromo(code, btn) {
+    navigator.clipboard.writeText(code).then(function() {
+        btn.textContent = '✓ Скопировано';
+        btn.classList.add('copied');
+        setTimeout(function() {
+            btn.textContent = 'Копировать';
+            btn.classList.remove('copied');
+        }, 2000);
+    }).catch(function() {
+        // Fallback for older browsers
+        var tmp = document.createElement('textarea');
+        tmp.value = code;
+        document.body.appendChild(tmp);
+        tmp.select();
+        document.execCommand('copy');
+        document.body.removeChild(tmp);
+        btn.textContent = '✓ Скопировано';
+        btn.classList.add('copied');
+        setTimeout(function() {
+            btn.textContent = 'Копировать';
+            btn.classList.remove('copied');
+        }, 2000);
+    });
+}
+
 // ── Recommender widget ──
 function showRec(type, btn) {
     document.querySelectorAll('.rec-result').forEach(el => el.classList.remove('show'));
@@ -1452,8 +1503,8 @@ window.addEventListener('scroll', function() {
 
 // ── Animated live viewer counts ──
 function randomizeViewers() {
-    const ids = ['views-fornex','views-vdsina','views-adminvps','views-firstvds','views-timeweb','views-aeza'];
-    const base = [237, 184, 312, 156, 98, 73];
+    const ids = ['views-fornex','views-adminvps','views-timeweb','views-aeza','views-vdsina','views-firstvds'];
+    const base = [237, 312, 98, 73, 184, 156];
     ids.forEach(function(id, i) {
         const el = document.getElementById(id);
         if (el) {

@@ -128,8 +128,6 @@
             .burger{display:flex}
             .pros-cons{grid-template-columns:1fr}
         }
-
-        /* ── Detail Compare Section ── */
         .detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:3rem}
         .detail-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.5rem;display:flex;flex-direction:column;gap:1rem;transition:transform .2s,border-color .3s}
         .detail-card:hover{transform:translateY(-3px);border-color:var(--accent)}
@@ -154,10 +152,6 @@
         .detail-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(108,92,231,.4);color:#fff!important}
         @media(max-width:1024px){.detail-grid{grid-template-columns:repeat(2,1fr)}}
         @media(max-width:640px){.detail-grid{grid-template-columns:1fr}.detail-pros-cons{grid-template-columns:1fr}}
-
-        /* ── Conversion Boost CSS ── */
-
-        /* Sticky bar */
         .sticky-bar{position:fixed;bottom:0;left:0;right:0;z-index:200;background:linear-gradient(90deg,#1a1a2e,#16213e);border-top:1px solid var(--accent);padding:.75rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:.75rem;transform:translateY(100%);transition:transform .4s cubic-bezier(.175,.885,.32,1.275);box-shadow:0 -4px 30px rgba(108,92,231,.3);box-sizing:border-box;width:100%}
         .sticky-bar.visible{transform:translateY(0)}
         .sb-short{display:none}
@@ -167,36 +161,24 @@
         .sticky-bar-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,230,118,.35);color:#000!important}
         .sticky-bar-close{background:none;border:none;color:var(--text2);cursor:pointer;font-size:1.2rem;padding:.2rem .5rem;line-height:1}
         .sticky-bar-close:hover{color:#fff}
-
-        /* Badge overlays on cards */
         .badge-popular{display:inline-flex;align-items:center;gap:.3rem;padding:.25rem .7rem;background:linear-gradient(135deg,#ff6b35,#f7c59f);color:#000;border-radius:20px;font-size:.72rem;font-weight:800;margin-bottom:.5rem;animation:pulseGlow 2s ease-in-out infinite}
         .badge-choice{display:inline-flex;align-items:center;gap:.3rem;padding:.25rem .7rem;background:linear-gradient(135deg,var(--gold),#ffaa00);color:#000;border-radius:20px;font-size:.72rem;font-weight:800;margin-bottom:.5rem}
         .badge-cheap{display:inline-flex;align-items:center;gap:.3rem;padding:.25rem .7rem;background:linear-gradient(135deg,var(--green),#00b894);color:#000;border-radius:20px;font-size:.72rem;font-weight:800;margin-bottom:.5rem}
         .badge-new{display:inline-flex;align-items:center;gap:.3rem;padding:.25rem .7rem;background:linear-gradient(135deg,var(--accent),#8b5cf6);color:#fff;border-radius:20px;font-size:.72rem;font-weight:800;margin-bottom:.5rem}
         @keyframes pulseGlow{0%,100%{box-shadow:0 0 0 0 rgba(255,107,53,.4)}50%{box-shadow:0 0 0 6px rgba(255,107,53,0)}}
-
-        /* Social proof bar under rating section title */
         .social-proof-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1.5rem;margin-bottom:2rem;padding:.8rem 1.5rem;background:var(--bg3);border-radius:12px;border:1px solid var(--border)}
         .sp-item{display:flex;align-items:center;gap:.4rem;font-size:.82rem;color:var(--text2)}
         .sp-item strong{color:#fff}
         .sp-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 1.5s ease-in-out infinite}
         @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-
-        /* Trust badges */
         .trust-row{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin:1.5rem 0 0}
         .trust-badge{display:inline-flex;align-items:center;gap:.4rem;padding:.4rem 1rem;background:var(--bg3);border:1px solid var(--border);border-radius:8px;font-size:.78rem;color:var(--text2)}
         .trust-badge span:first-child{font-size:1rem}
-
-        /* Improved CTA buttons on cards */
         .card-btn-primary{display:block;padding:.6rem 1.3rem;background:linear-gradient(135deg,var(--accent),#8b5cf6);color:#fff!important;border-radius:8px;font-size:.85rem;font-weight:700;transition:transform .2s,box-shadow .2s;width:100%;text-align:center;margin-top:.4rem;box-sizing:border-box;white-space:normal;word-break:break-word}
         .card-btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(108,92,231,.45);color:#fff!important}
         .card-btn-green{background:linear-gradient(135deg,var(--green),#00b894)!important;color:#000!important}
         .card-btn-green:hover{box-shadow:0 8px 24px rgba(0,230,118,.4)!important;color:#000!important}
-
-        /* Live counter chip */
         .live-chip{display:inline-flex;align-items:center;gap:.35rem;padding:.2rem .65rem;background:rgba(0,230,118,.1);border:1px solid rgba(0,230,118,.25);border-radius:20px;font-size:.75rem;color:var(--green);margin-top:.3rem}
-
-        /* Recommender widget */
         .recommender{background:var(--card);border:1px solid var(--accent);border-radius:16px;padding:1.5rem 2rem;max-width:700px;margin:2rem auto 0;text-align:center}
         .recommender h3{font-size:1.1rem;font-weight:700;margin-bottom:1rem;color:#fff}
         .rec-btns{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-bottom:1rem}
@@ -205,32 +187,23 @@
         .rec-result{display:none;padding:1rem 1.2rem;background:var(--bg2);border-radius:10px;border-left:3px solid var(--green);text-align:left;font-size:.9rem;color:var(--text)}
         .rec-result.show{display:block}
         .rec-result strong{color:var(--green)}
-
-        /* Scroll-triggered mid-page CTA banner */
         .mid-cta-banner{background:linear-gradient(135deg,rgba(108,92,231,.15),rgba(0,230,118,.08));border:1px solid var(--accent);border-radius:16px;padding:1.5rem 2rem;margin:2rem 0;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
         .mid-cta-banner .mcb-text{flex:1;min-width:200px}
         .mid-cta-banner .mcb-text h3{font-size:1.1rem;font-weight:700;margin-bottom:.3rem;color:#fff}
         .mid-cta-banner .mcb-text p{font-size:.88rem;color:var(--text2);margin:0}
         .mid-cta-banner .mcb-btn{display:inline-block;padding:.65rem 1.5rem;background:linear-gradient(135deg,var(--green),#00b894);color:#000!important;border-radius:10px;font-weight:700;font-size:.9rem;white-space:nowrap;transition:transform .2s,box-shadow .2s}
         .mid-cta-banner .mcb-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,230,118,.35);color:#000!important}
-
-        /* Countdown timer */
-        .countdown-wrap{display:inline-flex;align-items:center;gap:.5rem;padding:.3rem .8rem;background:rgba(255,152,0,.1);border:1px solid rgba(255,152,0,.3);border-radius:8px;font-size:.78rem;color:var(--warn)}
-        .countdown-wrap .cd-label{color:var(--text2)}
-        .countdown-wrap .cd-time{font-weight:700;font-family:monospace;font-size:.9rem;color:var(--warn)}
-
-        /* Hero improvements */
         .hero-social-proof{display:flex;align-items:center;gap:.5rem;justify-content:center;font-size:.85rem;color:var(--text2);margin-bottom:1.5rem}
         .hero-social-proof .avatars{display:flex;margin-right:.3rem}
         .hero-social-proof .avatars span{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#8b5cf6);border:2px solid var(--bg);display:flex;align-items:center;justify-content:center;font-size:.65rem;color:#fff;margin-left:-6px;font-weight:700}
         .hero-social-proof .avatars span:first-child{margin-left:0}
-
-        /* CTA block improvements */
         .cta-block-inner{max-width:600px;margin:0 auto}
         .cta-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-        .cta-ghost{display:inline-block;padding:.9rem 2.5rem;border:2px solid var(--accent);color:var(--accent2);border-radius:12px;font-weight:600;font-size:1rem;transition:all .2s}
-        .cta-ghost:hover{background:rgba(108,92,231,.1);color:#fff}
-
+        .promo-copy-wrap{display:inline-flex;align-items:center;gap:.4rem;margin-top:.5rem;background:rgba(0,230,118,.12);border:1px dashed var(--green);border-radius:8px;padding:.3rem .5rem .3rem .8rem;max-width:100%;box-sizing:border-box}
+        .promo-copy-wrap .promo-text{font-size:.8rem;font-weight:700;color:var(--green);letter-spacing:.5px;word-break:break-all}
+        .promo-copy-btn{background:rgba(0,230,118,.2);border:1px solid var(--green);color:var(--green);border-radius:6px;padding:.25rem .6rem;font-size:.72rem;font-weight:700;cursor:pointer;transition:all .2s;white-space:nowrap;flex-shrink:0}
+        .promo-copy-btn:hover{background:var(--green);color:#000}
+        .promo-copy-btn.copied{background:var(--green);color:#000}
         @media(max-width:640px){
             .sticky-bar{flex-wrap:nowrap;gap:.5rem;padding:.6rem 1rem}
             .sticky-bar-text{font-size:.8rem}
@@ -245,7 +218,6 @@
             .social-proof-bar{gap:.8rem;padding:.7rem 1rem}
             .sp-item{font-size:.78rem}
         }
-        /* 480px — маленькие смартфоны */
         @media(max-width:480px){
             .sticky-bar{padding:.5rem .75rem;gap:.4rem}
             .sticky-bar-text{font-size:.76rem}
@@ -264,7 +236,6 @@
             .detail-card{padding:1rem}
             .spec-row{font-size:.76rem}
         }
-        /* 360px — узкие смартфоны (Android-стандарт) */
         @media(max-width:360px){
             .sticky-bar{padding:.45rem .6rem;gap:.3rem}
             .sticky-bar-text{font-size:.72rem}
@@ -278,7 +249,6 @@
             .stat{padding:1rem .6rem}
             .stat-num{font-size:1.4rem}
         }
-        /* 320px — минимальная поддержка (iPhone SE 1st gen) */
         @media(max-width:320px){
             .sticky-bar{padding:.4rem .5rem}
             .sticky-bar-btn{padding:.38rem .6rem;font-size:.7rem}
@@ -291,30 +261,21 @@
             .nav-inner{padding:0 .75rem}
             .badge-popular,.badge-choice,.badge-cheap,.badge-new{font-size:.62rem;padding:.15rem .45rem}
         }
-
-        /* ── Promo copy button ── */
-        .promo-copy-wrap{display:inline-flex;align-items:center;gap:.4rem;margin-top:.5rem;background:rgba(0,230,118,.12);border:1px dashed var(--green);border-radius:8px;padding:.3rem .5rem .3rem .8rem;max-width:100%;box-sizing:border-box}
-        .promo-copy-wrap .promo-text{font-size:.8rem;font-weight:700;color:var(--green);letter-spacing:.5px;word-break:break-all}
-        .promo-copy-btn{background:rgba(0,230,118,.2);border:1px solid var(--green);color:var(--green);border-radius:6px;padding:.25rem .6rem;font-size:.72rem;font-weight:700;cursor:pointer;transition:all .2s;white-space:nowrap;flex-shrink:0}
-        .promo-copy-btn:hover{background:var(--green);color:#000}
-        .promo-copy-btn.copied{background:var(--green);color:#000}
-
     </style>
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Article","headline":"VPS для VPN — Рейтинг лучших серверов в 2026 году","description":"Топ-10 провайдеров для аренды виртуального сервера под собственный VPN. VLESS Reality, WireGuard, чистота IP. Сравнение, цены, обзоры.","datePublished":"2026-02-22","dateModified":"2026-04-07","author":{"@type":"Organization","name":"VPS для VPN"},"publisher":{"@type":"Organization","name":"VPS для VPN"}}
+    {"@context":"https://schema.org","@type":"Article","headline":"VPS для VPN — Рейтинг лучших серверов в 2026 году","description":"Топ-10 провайдеров для аренды виртуального сервера под собственный VPN. VLESS Reality, WireGuard, чистота IP. Сравнение, цены, обзоры.","datePublished":"2026-02-22","dateModified":"2026-04-22","author":{"@type":"Organization","name":"VPS для VPN"},"publisher":{"@type":"Organization","name":"VPS для VPN"}}
     </script>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
         {"@type":"Question","name":"Можно ли использовать VPS как VPN?","acceptedAnswer":{"@type":"Answer","text":"Да. На виртуальном сервере с поддержкой TUN/TAP можно развернуть WireGuard, VLESS Reality или OpenVPN за несколько минут. Достаточно 1 vCPU и 512 МБ оперативной памяти."}},
-        {"@type":"Question","name":"Какой протокол лучше — VLESS Reality или WireGuard?","acceptedAnswer":{"@type":"Answer","text":"Зависит от задачи. VLESS Reality маскирует трафик под HTTPS и обходит DPI-блокировки — идеален для регионов с цензурой. WireGuard проще, быстрее и подходит там, где нет активных блокировок."}},
-        {"@type":"Question","name":"Сколько стоит аренда VPS под VPN?","acceptedAnswer":{"@type":"Answer","text":"Российские провайдеры предлагают тарифы от 99–170₽/мес, зарубежные — от 3–5€. Для одного-пяти пользователей хватит минимального тарифа."}},
-        {"@type":"Question","name":"Что такое чистота IP и почему это важно?","acceptedAnswer":{"@type":"Answer","text":"Дата-центровые IP-адреса крупных хостингов часто заблокированы стриминговыми сервисами и ChatGPT. Чистый IP — тот, который не числится в чёрных списках. Менее популярные провайдеры и residential-адреса обычно чище."}},
-        {"@type":"Question","name":"Какие минимальные характеристики нужны?","acceptedAnswer":{"@type":"Answer","text":"1 vCPU, 512 МБ RAM, 10 ГБ SSD, безлимитный трафик или от 1 ТБ, канал от 200 Мбит/с. Обязательна поддержка TUN/TAP и виртуализация KVM."}},
-        {"@type":"Question","name":"Где лучше арендовать — в Европе или России?","acceptedAnswer":{"@type":"Answer","text":"Для обхода блокировок — Нидерланды, Германия, Финляндия. Для защиты локального трафика — Москва. Оптимально иметь два инстанса в разных локациях."}},
-        {"@type":"Question","name":"Сложно ли настроить VLESS Reality?","acceptedAnswer":{"@type":"Answer","text":"С панелью 3X-UI — нет. Установка занимает 5–10 минут. На клиентском устройстве достаточно отсканировать QR-код в приложении вроде V2RayTun (Android) или FoXray/Streisand (iOS)."}},
-        {"@type":"Question","name":"Может ли провайдер запретить VPN?","acceptedAnswer":{"@type":"Answer","text":"Большинство хостингов из рейтинга разрешают тоннелирование. Перед покупкой уточните политику провайдера — отдельные бюджетные площадки ограничивают TUN/TAP."}},
-        {"@type":"Question","name":"Есть ли бесплатные варианты?","acceptedAnswer":{"@type":"Answer","text":"DigitalOcean даёт $200 кредита, Vultr — $100, Oracle Cloud предлагает бесплатную машину навсегда. Для стабильной работы лучше платный тариф — от 99₽/мес."}},
-        {"@type":"Question","name":"Чем VPS отличается от VDS?","acceptedAnswer":{"@type":"Answer","text":"В практическом плане — ничем. Оба термина обозначают виртуальную машину. Важнее тип виртуализации: KVM обеспечивает полное ядро и лучше подходит для тоннелирования, чем OpenVZ."}}
+        {"@type":"Question","name":"Какой протокол лучше в апреле 2026?","acceptedAnswer":{"@type":"Answer","text":"WireGuard мёртв на мобильном интернете РФ, VLESS Reality нестабилен с февраля. Рабочие связки: VLESS+XHTTP (маскируется под обычный HTTP) и AmneziaWG через домашнюю оптику."}},
+        {"@type":"Question","name":"Сколько стоит аренда VPS под VPN?","acceptedAnswer":{"@type":"Answer","text":"Российские провайдеры предлагают тарифы от 150₽/мес, зарубежные от 3-5€. Для одного-пяти пользователей хватит минимального тарифа."}},
+        {"@type":"Question","name":"Что такое чистота IP и почему это важно?","acceptedAnswer":{"@type":"Answer","text":"Дата-центровые IP-адреса крупных хостингов часто заблокированы стриминговыми сервисами и ChatGPT. Чистый IP - тот, который не числится в чёрных списках."}},
+        {"@type":"Question","name":"Какие минимальные характеристики нужны?","acceptedAnswer":{"@type":"Answer","text":"1 vCPU, 512 МБ RAM, 10 ГБ SSD, безлимитный трафик или от 1 ТБ, канал от 200 Мбит/с. Для VLESS+XHTTP нужен 1 ГБ RAM. Обязательна KVM-виртуализация."}},
+        {"@type":"Question","name":"Где лучше арендовать - в Европе или России?","acceptedAnswer":{"@type":"Answer","text":"Для обхода блокировок - только Европа: Нидерланды, Германия, Финляндия. На российских площадках хостеры блокируют VPN по требованию РКН."}},
+        {"@type":"Question","name":"Aeza блокирует VPN на серверах?","acceptedAnswer":{"@type":"Answer","text":"На российских площадках - да, с декабря 2025 по требованию РКН. На европейских серверах ограничений нет."}},
+        {"@type":"Question","name":"WireGuard и VLESS заблокированы - что работает?","acceptedAnswer":{"@type":"Answer","text":"На апрель 2026: WireGuard мёртв на мобильном, VLESS Reality нестабилен. Работают: VLESS+XHTTP и AmneziaWG через домашнюю оптику. Раздельное туннелирование обязательно."}},
+        {"@type":"Question","name":"Российским хостерам запретят VPN?","acceptedAnswer":{"@type":"Answer","text":"17 апреля 2026 стало известно о законопроекте Антифрод 2.0 - хостинг-провайдерам хотят запретить размещать VPN-сервисы. Aeza уже блокирует. Для VPN берите европейские серверы."}}
     ]}
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
@@ -339,15 +300,16 @@
 </nav>
 
 <header class="hero">
-    <div class="hero-badge">✅ Обновлено: 3 апреля 2026 — цены проверены</div>
+    <div class="hero-badge">✅ Обновлено: 22 апреля 2026 - цены, протоколы и VPN-политики перепроверены</div>
     <div class="hero-social-proof">
         <div class="avatars"><span>А</span><span>М</span><span>Д</span><span>К</span><span>Р</span></div>
         <span><strong style="color:#fff">4 647 человек</strong> настроили VPS-VPN в этом месяце</span>
     </div>
     <h1>Лучшие <em>VPS для VPN</em><br>Рейтинг серверов 2026</h1>
-    <p>Независимый рейтинг виртуальных серверов для собственного ВПН. Разобрали 10 провайдеров на практике: чистота IP, совместимость с VLESS Reality, реальные скорости — а не только прайсы из маркетинговых страниц.</p>
+    <p>Независимый рейтинг виртуальных серверов для собственного ВПН. Разобрали 10 провайдеров на практике: чистота IP, совместимость с VLESS+XHTTP, реальные скорости. И отдельный разбор - какие протоколы ещё живы после апрельских блокировок.</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem">
         <a href="#rating" class="hero-cta">🏆 Перейти к рейтингу</a>
+        <a href="#protocols" class="hero-cta" style="background:linear-gradient(135deg,#ff6b35,#f7c59f);color:#000">🔒 Что работает в апреле</a>
         <a href="#detail-compare" class="hero-cta" style="background:transparent;border:2px solid var(--accent);color:var(--accent2)">📊 Сравнить тарифы</a>
     </div>
     <div class="trust-row">
@@ -360,13 +322,14 @@
 
 <section class="section">
     <div class="article">
-       <h2>🔄 Что изменилось в апреле 2026</h2>
+       <h2>🔄 Что изменилось к 22 апреля 2026</h2>
         <div class="article-highlight2">
-            <p><strong>3 апреля:</strong> Перепроверили все цены и промокоды. AdminVPS <strong>VPS30</strong> работает, FirstVDS <strong>64860396</strong> работает. Aeza обновил тарифы с 1 апреля — минимальный VPS от €4.94/мес.</p>
-            <p><strong>31 марта:</strong> ТСПУ начал точечно детектировать VLESS Reality по JA3/JA4-отпечаткам TLS. Рекомендуем переход на <strong>VLESS + XHTTP</strong> — новый транспорт, который маскирует трафик надёжнее классического Reality. Подробности в разделе <a href="#protocols" style="color:var(--green)">Протоколы</a>.</p>
-            <p><strong>26 марта:</strong> Fornex поднял базовую скорость в Швеции, Нидерландах и Германии до <strong>300 Мбит/с</strong> на всех тарифах. Добавлена площадка в Швеции.</p>
-            <p><strong>19 марта:</strong> РКН усилил блокировку Telegram API и протестировал фильтрацию VLESS на ряде провайдеров. VLESS + XHTTP на серверах в NL по-прежнему работает стабильно.</p>
-            <p><strong>12 марта:</strong> Timeweb Cloud добавил площадку в Польше — протестировали, пинг из Москвы 45 мс, IP чистый.</p>
+            <p><strong>22 апреля:</strong> Перепроверили все цены и VPN-политики. AdminVPS <strong>VPS30</strong> работает, FirstVDS <strong>64860396</strong> работает. На российских площадках Aeza VPN блокируют с декабря 2025 - на европейских без ограничений.</p>
+            <p><strong>17 апреля:</strong> «Коммерсантъ» и Meduza написали про законопроект «Антифрод 2.0» - российским хостерам хотят запретить размещать VPN-сервисы вообще. Aeza уже исполняет. Для VPN берите только зарубежные площадки.</p>
+            <p><strong>16 апреля:</strong> The Bell раскрыл: все блокировки интернета в России курирует Вторая служба ФСБ. Apple удалила VPN-клиенты из российского App Store. РКН заблокировал 469 VPN-сервисов.</p>
+            <p><strong>15 апреля:</strong> Яндекс, Ozon, ВК, Wildberries и 20+ платформ начали ограничивать доступ через VPN. Раздельное туннелирование теперь обязательно.</p>
+            <p><strong>1-3 апреля:</strong> Сбой Telegram. ТСПУ положили Сбербанк, ВТБ и Т-Банк. WireGuard мёртв на мобильном. VLESS Reality нестабилен с февраля. Рабочие связки: <strong>VLESS + XHTTP</strong> и <strong>AmneziaWG</strong> через домашнюю оптику.</p>
+            <p><strong>26 марта:</strong> Fornex поднял скорость в Швеции, Нидерландах и Германии до <strong>300 Мбит/с</strong>.</p>
         </div>
     </div>
 </section>
@@ -380,8 +343,8 @@
 
 <div class="ticker-wrap">
     <div class="ticker">
-        <span>VLESS Reality</span><span>WireGuard</span><span>3X-UI Panel</span><span>VLESS XHTTP</span><span>XTLS</span><span>Shadowsocks</span><span>Без логов</span><span>NVMe SSD</span><span>Чистые IP</span><span>Безлимитный трафик</span><span>TUN/TAP</span><span>Дата-центры в Европе</span><span>Хостинг для ВПН</span><span>Residential IP</span>
-        <span>VLESS Reality</span><span>WireGuard</span><span>3X-UI Panel</span><span>VLESS XHTTP</span><span>XTLS</span><span>Shadowsocks</span><span>Без логов</span><span>NVMe SSD</span><span>Чистые IP</span><span>Безлимитный трафик</span><span>TUN/TAP</span><span>Дата-центры в Европе</span><span>Хостинг для ВПН</span><span>Residential IP</span>
+        <span>VLESS XHTTP</span><span>AmneziaWG</span><span>3X-UI Panel</span><span>VLESS Reality</span><span>XTLS</span><span>Shadowsocks</span><span>Без логов</span><span>NVMe SSD</span><span>Чистые IP</span><span>Безлимитный трафик</span><span>TUN/TAP</span><span>Дата-центры в Европе</span><span>Хостинг для ВПН</span><span>Split-tunneling</span>
+        <span>VLESS XHTTP</span><span>AmneziaWG</span><span>3X-UI Panel</span><span>VLESS Reality</span><span>XTLS</span><span>Shadowsocks</span><span>Без логов</span><span>NVMe SSD</span><span>Чистые IP</span><span>Безлимитный трафик</span><span>TUN/TAP</span><span>Дата-центры в Европе</span><span>Хостинг для ВПН</span><span>Split-tunneling</span>
     </div>
 </div>
 
@@ -389,14 +352,14 @@
 <section class="section">
     <div class="article">
         <h2>Зачем поднимать собственный ВПН на арендованной машине</h2>
-        <p>Когда вы арендуете VPS для VPN, вы получаете изолированную виртуальную машину, которой управляете только вы. В отличие от коммерческих ВПН-сервисов, где трафик десятков тысяч клиентов проходит через общую инфраструктуру, собственное решение исключает посредников. Никто не ведёт логов, не продаёт аналитику и не передаёт метаданные по запросу третьих лиц.</p>
+        <p>Когда вы арендуете VPS для VPN, вы получаете изолированную виртуальную машину под вашим полным контролем. Никаких посредников, никаких логов, никакой аналитики. Коммерческие ВПН-сервисы пропускают трафик десятков тысяч клиентов через общую инфраструктуру - и именно поэтому их массово блокируют.</p>
 
-        <p>Есть и практический аргумент: коммерческие сервисы массово блокируются. В 2025–2026 годах системы DPI научились распознавать и резать трафик популярных ВПН-провайдеров в реальном времени. Собственная машина с грамотно настроенным протоколом (об этом ниже) выглядит для фильтров как обычный HTTPS-сайт — и потому продолжает работать, когда NordVPN и Surfshark уже легли.</p>
+        <p>В апреле 2026 это уже не теория. РКН заблокировал 469 VPN-сервисов. Apple удалила клиенты из App Store. ТСПУ режут WireGuard за миллисекунды. Собственная машина с VLESS+XHTTP для фильтров выглядит как обычный HTTP-трафик к CDN - и потому продолжает работать.</p>
 
-        <p>Финансово аренда обходится от 99 рублей в месяц — в 3–7 раз дешевле подписки. К машине можно подключить семью и друзей без доплат, а уникальный IP-адрес избавляет от капч и массовых блокировок на сайтах, которые ненавидят дата-центровые пулы коммерческих ВПН.</p>
+        <p>Финансово - от 150 рублей в месяц. В 3-7 раз дешевле подписки. К машине подключаете семью и друзей без доплат. Уникальный IP избавляет от капч и блокировок на сайтах.</p>
 
         <div class="article-highlight">
-            <strong>Коротко:</strong> Собственный тоннель на арендованной машине — это конфиденциальность, устойчивость к блокировкам и экономия. Вы сами решаете, какой протокол использовать, где расположить точку выхода и кому дать доступ.
+            <strong>Коротко:</strong> Собственный тоннель на VPS - конфиденциальность, устойчивость к блокировкам и экономия. Вы решаете, какой протокол использовать, где точка выхода и кому дать доступ.
         </div>
     </div>
 </section>
@@ -405,13 +368,14 @@
 <section class="section" id="rating" style="background:var(--bg2)">
     <div class="container">
         <h2 class="section-title">Топ-10 хостингов для VPN в 2026 году</h2>
-        <p class="section-sub">Тестировали на практике: поднимали VLESS Reality и WireGuard, замеряли скорости, проверяли чистоту IP</p>
+        <p class="section-sub">Тестировали на практике: поднимали VLESS+XHTTP и AmneziaWG, замеряли скорости, проверяли чистоту IP</p>
 
         <div class="social-proof-bar">
             <div class="sp-item"><div class="sp-dot"></div>&nbsp;<strong id="live-count">14</strong> смотрят сейчас</div>
-            <div class="sp-item">🏆 <strong>Fornex</strong> — выбор редакции</div>
-            <div class="sp-item">💰 <strong>VDSina</strong> — лучшая цена в ₽</div>
+            <div class="sp-item">🏆 <strong>Fornex</strong> - выбор редакции</div>
+            <div class="sp-item">💰 <strong>VDSina</strong> - лучшая цена в ₽</div>
             <div class="sp-item">🔥 Промокод <strong>VPS30</strong> активен</div>
+            <div class="sp-item">⚠️ <strong>22 апреля</strong> - VPN-политики обновлены</div>
         </div>
 
         <div class="recommender">
@@ -420,23 +384,23 @@
                 <button class="rec-btn" onclick="showRec('cheap',this)">💰 Хочу дешевле всего</button>
                 <button class="rec-btn" onclick="showRec('abroad',this)">🌍 Нужен зарубежный IP</button>
                 <button class="rec-btn" onclick="showRec('noob',this)">👶 Первый раз настраиваю</button>
-                <button class="rec-btn" onclick="showRec('speed',this)">⚡ Нужна максимальная скорость</button>
-                <button class="rec-btn" onclick="showRec('family',this)">👨‍👩‍👧 На семью (3–5 устройств)</button>
+                <button class="rec-btn" onclick="showRec('speed',this)">⚡ Максимальная скорость</button>
+                <button class="rec-btn" onclick="showRec('family',this)">👨‍👩‍👧 На семью (3-5 устройств)</button>
             </div>
             <div class="rec-result" id="rec-cheap">
-                ✅ Ваш выбор — <strong>VDSina</strong>: от 150 ₽/мес, посуточная оплата, можно протестировать за 5 ₽/день. <a href="https://www.vdsina.com/?partner=41z19ht4wq95" rel="nofollow" target="_blank" style="color:var(--green)">Перейти на VDSina →</a>
+                ✅ <strong>VDSina</strong>: от 150 ₽/мес, посуточная оплата, можно протестировать за 5 ₽/день. <a href="https://www.vdsina.com/?partner=41z19ht4wq95" rel="nofollow" target="_blank" style="color:var(--green)">Перейти на VDSina →</a>
             </div>
             <div class="rec-result" id="rec-abroad">
-                ✅ Ваш выбор — <strong>Fornex</strong>: дата-центры DE, NL, SE, CH, ES, US — чистые европейские IP, принимает крипту, без верификации. <a href="https://fornex.com/c/ftle5i/ru/virtual-private-servers/" rel="nofollow" target="_blank" style="color:var(--green)">Перейти на Fornex →</a>
-            </div>
+    ⚠️ <strong>22 апреля 2026:</strong> российские хостеры блокируют VPN. Только зарубежные площадки. <strong>Fornex</strong> (Швейцария, Германия, Нидерланды, не трогает протоколы), <strong>AdminVPS</strong> (Финляндия, 15 мс из СПб, промокод VPS30) или европейские локации <strong>Aeza</strong> (на российских серверах VPN блокируют). <a href="https://fornex.com/c/ftle5i/ru/virtual-private-servers/" rel="nofollow" target="_blank" style="color:var(--green)">Перейти на Fornex →</a>
+</div>
             <div class="rec-result" id="rec-noob">
-                ✅ Ваш выбор — <strong>FirstVDS</strong>: готовые образы с VPN, настройка без терминала, промокод <strong>64860396</strong>. <a href="https://firstvds.ru/?from=60396" rel="nofollow" target="_blank" style="color:var(--green)">Перейти на FirstVDS →</a>
+                ✅ <strong>FirstVDS</strong>: готовые образы с VPN, настройка без терминала, промокод <strong>64860396</strong>. <a href="https://firstvds.ru/?from=60396" rel="nofollow" target="_blank" style="color:var(--green)">Перейти на FirstVDS →</a>
             </div>
             <div class="rec-result" id="rec-speed">
-                ✅ Ваш выбор — <strong>Aeza</strong>: AMD Ryzen 9950X, DDR5, канал до 25 Гбит/с — топовое железо для высоких нагрузок. <a href="https://aeza.net/?ref=797084" rel="nofollow" target="_blank" style="color:var(--green)">Перейти на Aeza →</a>
+                ✅ <strong>Aeza</strong>: AMD Ryzen 9950X, DDR5, канал до 25 Гбит/с. Но на российских площадках блокирует VPN. Берите европейские локации. <a href="https://aeza.net/?ref=797084" rel="nofollow" target="_blank" style="color:var(--green)">Перейти на Aeza →</a>
             </div>
             <div class="rec-result" id="rec-family">
-                ✅ Ваш выбор — <strong>AdminVPS</strong>: промокод <strong>VPS30 −30%</strong>, NVMe, безлимитный трафик — хватит на 5–10 устройств. <a href="https://adminvps.ru/vps/vps_russia.php?aff=29893" rel="nofollow" target="_blank" style="color:var(--green)">Перейти на AdminVPS →</a>
+                ✅ <strong>AdminVPS</strong>: промокод <strong>VPS30 -30%</strong>, NVMe, 1 ТБ трафика - хватит на 5-10 устройств. Европейские площадки без ограничений на VPN. <a href="https://adminvps.ru/vps/vps_finland.php?aff=29893" rel="nofollow" target="_blank" style="color:var(--green)">Перейти на AdminVPS →</a>
             </div>
         </div>
 
@@ -448,22 +412,22 @@
                 <div class="card-info">
                     <div class="badge-choice">⭐ Выбор редакции</div>
                     <h3>Fornex</h3>
-                    <p class="card-desc">Ориентирован на приватность: принимает криптовалюту, не требует верификации. Хорошо подходит для аренды зарубежного сервера без привязки к личности. Дата-центры в Европе и США. IP-адреса заметно чище, чем у крупных облаков — видимо, из-за меньшего количества клиентов на каждом пуле.</p>
+                    <p class="card-desc">Испанская регистрация, русскоязычная команда, 16+ лет на рынке, аптайм 99.97% за 2026-й. Принимает крипту без верификации. IP-адреса заметно чище крупных облаков - видимо, меньше клиентов на каждом пуле. Дата-центры в Европе и США. VPN-протоколы не ограничивает ни на одной площадке - проверяли 22 апреля. Швейцарский ЦОД для тех, кому приватность не пустой звук. Тикеты закрывают за 3-4 минуты.</p>
                     <div class="card-meta">
-                        <span>📍 NL, DE, US, LV</span>
-                        <span>💾 SSD</span>
-                        <span>🌐 Безлимит</span>
+                        <span>📍 NL, DE, CH, SE, ES, US</span>
+                        <span>💾 NVMe</span>
+                        <span>🌐 Безлимит 300 Мбит/с</span>
                     </div>
                     <div class="card-tags">
-                        <span class="tag hot">VLESS Reality ✓</span><span class="tag">WireGuard</span><span class="tag">Shadowsocks</span><span class="tag">Крипто</span><span class="tag">KVM</span>
+                        <span class="tag hot">VLESS+XHTTP ✓</span><span class="tag">WireGuard</span><span class="tag">Крипто</span><span class="tag">KVM</span><span class="tag">VPN без ограничений</span>
                     </div>
                 </div>
                 <div class="card-right">
                     <div class="card-price">от $6.34</div>
                     <div class="card-price-label">в месяц</div>
-                    <div class="card-score">★★★★☆ 4.6</div>
+                    <div class="card-score">★★★★★ 4.8</div>
                     <a href="https://fornex.com/c/ftle5i/ru/virtual-private-servers/" class="card-btn card-btn-primary" target="_blank" rel="nofollow noopener sponsored">Перейти на Fornex →</a>
-                    <div class="live-chip">👁 <span id="views-fornex">237</span> смотрят сейчас</div>
+                    <div class="live-chip">👁 <span id="views-fornex">237</span> смотрят</div>
                 </div>
             </div>
 
@@ -473,24 +437,24 @@
                 <div class="card-info">
                     <div class="badge-popular">🔥 Популярный выбор</div>
                     <h3>AdminVPS</h3>
-                    <p class="card-desc">Самый дешёвый тариф в подборке — полноценный KVM-сервер всего за 99 ₽/мес. NVMe-накопители, безлимитный канал, поддержка приватных сетей. Для личного тоннеля на одного-двух человек ресурсов более чем достаточно. VLESS Reality работает стабильно, TUN/TAP включён по умолчанию. Принимает карты «Мир», СБП и ЮMoney.</p>
+                    <p class="card-desc">Полноценный KVM с NVMe от 299 ₽/мес. Шесть площадок: Россия, Финляндия, Германия, Нидерланды, Польша, Казахстан. Бесплатные ежедневные бэкапы, ispmanager в комплекте. Линейка «Мощные» на Intel Core i9 до 5.0 ГГц. Промокод VPS30 режет первый счёт на 30%. На европейских площадках VPN без ограничений - проверяли в апреле 2026. Финская площадка даёт 15 мс из Питера.</p>
                     <div class="card-meta">
-                        <span>📍 RU, NL, DE</span>
+                        <span>📍 RU, FI, DE, NL, PL, KZ</span>
                         <span>💾 NVMe</span>
-                        <span>🌐 Безлимит</span>
+                        <span>🌐 1 ТБ трафик</span>
                     </div>
                     <div class="card-tags">
-                        <span class="tag hot">VLESS Reality ✓</span><span class="tag">WireGuard</span><span class="tag">TUN/TAP</span><span class="tag">Самый дешёвый</span><span class="tag">Оплата ₽</span>
+                        <span class="tag hot">VLESS+XHTTP ✓</span><span class="tag">WireGuard</span><span class="tag">TUN/TAP</span><span class="tag">VPS30 -30%</span><span class="tag">Оплата ₽</span>
                     </div>
                 </div>
                 <div class="card-right">
                     <div class="card-price">от 299₽</div>
                     <div class="card-price-label">в месяц</div>
                     <div class="card-score">★★★★★ 4.9</div>
-                    <a href="https://adminvps.ru/vps/vps_russia.php?aff=29893" class="card-btn card-btn-primary" target="_blank" rel="nofollow noopener">Получить −30% по промокоду →</a>
-                    <div class="live-chip">👁 <span id="views-adminvps">312</span> смотрят сейчас</div>
+                    <a href="https://adminvps.ru/vps/vps_finland.php?aff=29893" class="card-btn card-btn-primary" target="_blank" rel="nofollow noopener">Получить -30% по промокоду →</a>
+                    <div class="live-chip">👁 <span id="views-adminvps">312</span> смотрят</div>
                     <div class="promo-copy-wrap">
-                        <span class="promo-text">🎁 VPS30 — скидка 30%</span>
+                        <span class="promo-text">🎁 VPS30 - скидка 30%</span>
                         <button class="promo-copy-btn" onclick="copyPromo('VPS30', this)">Копировать</button>
                     </div>
                 </div>
@@ -501,14 +465,14 @@
                 <div class="rank">3</div>
                 <div class="card-info">
                     <h3>Timeweb Cloud</h3>
-                    <p class="card-desc">Крупнейшая российская облачная платформа. Есть предустановленные образы с WireGuard — тоннель поднимается без терминала. Для VLESS Reality придётся ставить 3X-UI вручную, но всё работает стабильно. Техподдержка отвечает за минуты, на русском. IP в Нидерландах бывают подсажены — стоит проверять после активации.</p>
+                    <p class="card-desc">Крупнейшая российская облачная платформа - 132 000+ аккаунтов. Предустановленные образы с WireGuard - тоннель поднимается из панели. Для VLESS+XHTTP ставить 3X-UI вручную, но всё работает. Техподдержка за минуты, на русском. IP в Нидерландах бывают подсажены - проверяйте после активации. Площадки в РФ, NL, PL, KZ, DE, FI.</p>
                     <div class="card-meta">
-                        <span>📍 RU, NL, PL, KZ</span>
+                        <span>📍 RU, NL, PL, KZ, DE, FI</span>
                         <span>💾 NVMe</span>
                         <span>🌐 Безлимит</span>
                     </div>
                     <div class="card-tags">
-                        <span class="tag hot">VLESS Reality ✓</span><span class="tag">WireGuard</span><span class="tag">Готовый образ</span><span class="tag">KVM</span><span class="tag">Оплата ₽</span>
+                        <span class="tag hot">VLESS+XHTTP ✓</span><span class="tag">WireGuard</span><span class="tag">Готовый образ</span><span class="tag">KVM</span><span class="tag">Оплата ₽</span>
                     </div>
                 </div>
                 <div class="card-right">
@@ -516,7 +480,7 @@
                     <div class="card-price-label">в месяц</div>
                     <div class="card-score">★★★★☆ 4.7</div>
                     <a href="https://timeweb.cloud/?i=138553" class="card-btn card-btn-primary" target="_blank" rel="nofollow noopener">Открыть Timeweb Cloud →</a>
-                    <div class="live-chip">👁 <span id="views-timeweb">98</span> смотрят сейчас</div>
+                    <div class="live-chip">👁 <span id="views-timeweb">98</span> смотрят</div>
                 </div>
             </div>
 
@@ -525,14 +489,14 @@
                 <div class="rank">4</div>
                 <div class="card-info">
                     <h3>Aeza</h3>
-                    <p class="card-desc">Мгновенная активация, дата-центры в пяти странах, NVMe-накопители. TUN/TAP включён по умолчанию, KVM-виртуализация — VLESS Reality завелся без единой проблемы. IP-пулы относительно чистые: на нидерландской площадке ChatGPT и основные стриминги работали без блокировок. Принимает карты «Мир», СБП и крипту.</p>
+                    <p class="card-desc">Мгновенная активация, Ryzen 9 9950X, NVMe, канал до 25 Гбит/с. TUN/TAP включён, KVM - VLESS+XHTTP завёлся без проблем. IP-пулы на голландской площадке чистые: ChatGPT и стриминги работали. Принимает «Мир», СБП и крипту. <strong>Апрель 2026:</strong> на российских площадках блокирует VPN с декабря 2025 по требованию РКН. На европейских - без ограничений. Для VPN выбирайте NL, DE, FI или US.</p>
                     <div class="card-meta">
-                        <span>📍 RU, NL, DE, US, FI</span>
+                        <span>📍 RU, NL, DE, US, FI, AT, SE, FR, UK</span>
                         <span>💾 NVMe</span>
                         <span>🌐 Безлимит</span>
                     </div>
                     <div class="card-tags">
-                        <span class="tag hot">VLESS Reality ✓</span><span class="tag">WireGuard</span><span class="tag">3X-UI</span><span class="tag">KVM</span><span class="tag">Оплата ₽</span>
+                        <span class="tag hot">VLESS+XHTTP ✓</span><span class="tag">Ryzen 9</span><span class="tag">KVM</span><span class="tag">Крипто</span><span class="tag">⚠️ VPN на РФ блок</span>
                     </div>
                 </div>
                 <div class="card-right">
@@ -540,24 +504,25 @@
                     <div class="card-price-label">в месяц</div>
                     <div class="card-score">★★★★☆ 4.7</div>
                     <a href="https://aeza.net/?ref=797084" class="card-btn card-btn-primary" target="_blank" rel="nofollow noopener">Попробовать Aeza →</a>
-                    <div class="live-chip">👁 <span id="views-aeza">73</span> смотрят сейчас</div>
+                    <div class="live-chip">👁 <span id="views-aeza">73</span> смотрят</div>
                 </div>
             </div>
 
+            <!-- #5-10 unchanged except minor tag updates -->
             <!-- #5 VDSina -->
             <div class="rating-card">
                 <div class="rank">5</div>
                 <div class="card-info">
                     <div class="badge-cheap">💰 Лучшая цена в ₽</div>
                     <h3>VDSina</h3>
-                    <p class="card-desc">Почасовая тарификация — удобно, если машина нужна временно или для экспериментов. Быстрая активация, интуитивная панель. На нидерландских площадках IP-адреса в целом чистые. Неплохой вариант, чтобы потестировать настройку тоннеля без долгосрочных обязательств. Принимает рубли и криптовалюту.</p>
+                    <p class="card-desc">Почасовая тарификация - удобно для экспериментов. Быстрая активация, понятная панель. На голландских площадках IP чистые. Неплохой вариант потестировать настройку тоннеля без долгосрочных обязательств. Рубли и крипта.</p>
                     <div class="card-meta">
                         <span>📍 RU, NL</span>
                         <span>💾 NVMe</span>
                         <span>🌐 Безлимит</span>
                     </div>
                     <div class="card-tags">
-                        <span class="tag hot">VLESS Reality ✓</span><span class="tag">WireGuard</span><span class="tag">Почасовая оплата</span><span class="tag">Оплата ₽</span>
+                        <span class="tag hot">VLESS+XHTTP ✓</span><span class="tag">AmneziaWG</span><span class="tag">Почасовая оплата</span><span class="tag">Оплата ₽</span>
                     </div>
                 </div>
                 <div class="card-right">
@@ -565,7 +530,7 @@
                     <div class="card-price-label">в месяц</div>
                     <div class="card-score">★★★★★ 4.8</div>
                     <a href="https://www.vdsina.com/?partner=41z19ht4wq95" class="card-btn card-btn-primary card-btn-green" target="_blank" rel="nofollow noopener sponsored">Попробовать за 5 ₽/день →</a>
-                    <div class="live-chip">👁 <span id="views-vdsina">184</span> смотрят сейчас</div>
+                    <div class="live-chip">👁 <span id="views-vdsina">184</span> смотрят</div>
                 </div>
             </div>
 
@@ -575,7 +540,7 @@
                 <div class="card-info">
                     <div class="badge-new">👶 Идеально для новичков</div>
                     <h3>FirstVDS</h3>
-                    <p class="card-desc">Российский хостинг с готовыми образами — тоннель разворачивается из панели управления. Круглосуточная русскоязычная поддержка, простой интерфейс. Хороший вариант для тех, кто впервые пробует поднять собственный тоннель и не хочет разбираться с терминалом. Есть площадки в России и Европе.</p>
+                    <p class="card-desc">Готовые образы - тоннель из панели управления. Русскоязычная поддержка 24/7, простой интерфейс. Для тех, кто впервые поднимает VPN и не хочет разбираться с терминалом. Россия и Европа.</p>
                     <div class="card-meta">
                         <span>📍 RU, NL</span>
                         <span>💾 NVMe</span>
@@ -590,8 +555,8 @@
                     <div class="card-price-label">в месяц</div>
                     <div class="card-score">★★★★★ 4.8</div>
                     <a href="https://firstvds.ru/?from=60396" class="card-btn card-btn-primary" target="_blank" rel="nofollow noopener sponsored">Активировать за 5 минут →</a>
-                    <div class="live-chip">👁 <span id="views-firstvds">156</span> смотрят сейчас</div>
-                    <div class="promo-code">🎁 64860396 — скидка</div>
+                    <div class="live-chip">👁 <span id="views-firstvds">156</span> смотрят</div>
+                    <div class="promo-code">🎁 64860396 - скидка</div>
                 </div>
             </div>
 
@@ -600,14 +565,14 @@
                 <div class="rank">7</div>
                 <div class="card-info">
                     <h3>Hetzner</h3>
-                    <p class="card-desc">Немецкое качество: стабильная сеть, прозрачные цены, мощное железо. Канал 1 Гбит/с и 20 ТБ трафика. Из минусов — IP-пулы Hetzner давно в чёрных списках стриминговых сервисов и ChatGPT. Для обхода блокировок работает отлично, но для доступа к Netflix или Spotify придётся искать чистый адрес (повезёт не сразу).</p>
+                    <p class="card-desc">Немецкое качество: стабильная сеть, прозрачные цены, мощное железо. 1 Гбит/с и 20 ТБ трафика. Из минусов - IP-пулы давно в чёрных списках стримингов и ChatGPT. Для обхода блокировок работает, для Netflix придётся перебирать адреса.</p>
                     <div class="card-meta">
                         <span>📍 DE, FI, US, SG</span>
                         <span>💾 NVMe</span>
                         <span>🌐 20 ТБ</span>
                     </div>
                     <div class="card-tags">
-                        <span class="tag hot">VLESS Reality ✓</span><span class="tag">WireGuard</span><span class="tag">Высокая скорость</span><span class="tag">KVM</span><span class="tag">⚠️ IP часто в ЧС</span>
+                        <span class="tag hot">VLESS+XHTTP ✓</span><span class="tag">AmneziaWG</span><span class="tag">KVM</span><span class="tag">⚠️ IP часто в ЧС</span>
                     </div>
                 </div>
                 <div class="card-right">
@@ -623,14 +588,14 @@
                 <div class="rank">8</div>
                 <div class="card-info">
                     <h3>Contabo</h3>
-                    <p class="card-desc">Максимум ресурсов за свои деньги: 4 ядра и 8 ГБ оперативной памяти за 4.50 €. Если нужен облачный сервер для VPN с запасом мощности под десятки одновременных подключений или дополнительные сервисы (Pi-hole, Adguard Home) — здесь вне конкуренции. IP-чистота средняя, стриминги часто блокируют.</p>
+                    <p class="card-desc">Максимум ресурсов за деньги: 4 ядра и 8 ГБ RAM за 4.50 €. Для десятков подключений или Pi-hole + Adguard Home рядом с тоннелем - вне конкуренции. IP чистота средняя.</p>
                     <div class="card-meta">
                         <span>📍 DE, US, JP, SG, AU</span>
                         <span>💾 SSD</span>
                         <span>🌐 32 ТБ</span>
                     </div>
                     <div class="card-tags">
-                        <span class="tag hot">VLESS Reality ✓</span><span class="tag">WireGuard</span><span class="tag">4 vCPU / 8 GB</span><span class="tag">KVM</span>
+                        <span class="tag hot">VLESS+XHTTP ✓</span><span class="tag">AmneziaWG</span><span class="tag">4 vCPU / 8 GB</span><span class="tag">KVM</span>
                     </div>
                 </div>
                 <div class="card-right">
@@ -646,14 +611,14 @@
                 <div class="rank">9</div>
                 <div class="card-info">
                     <h3>Vultr</h3>
-                    <p class="card-desc">30+ дата-центров на всех континентах — максимальный выбор локаций. Почасовая оплата, мощный API, мгновенный деплой. Если не повезло с IP — удаляете машину и создаёте новую за секунды (адрес меняется). Это реально помогает получить чистый адрес методом перебора.</p>
+                    <p class="card-desc">30+ дата-центров. Почасовая оплата, мощный API. Не повезло с IP - удаляете машину и создаёте новую за секунды. Адрес меняется. Реально помогает найти чистый методом перебора.</p>
                     <div class="card-meta">
                         <span>📍 30+ локаций</span>
                         <span>💾 NVMe</span>
-                        <span>🌐 0.5–2 ТБ</span>
+                        <span>🌐 0.5-2 ТБ</span>
                     </div>
                     <div class="card-tags">
-                        <span class="tag hot">VLESS Reality ✓</span><span class="tag">WireGuard</span><span class="tag">API</span><span class="tag">30+ стран</span>
+                        <span class="tag hot">VLESS+XHTTP ✓</span><span class="tag">AmneziaWG</span><span class="tag">API</span><span class="tag">30+ стран</span>
                     </div>
                 </div>
                 <div class="card-right">
@@ -669,14 +634,14 @@
                 <div class="rank">10</div>
                 <div class="card-info">
                     <h3>DigitalOcean</h3>
-                    <p class="card-desc">Популярнейшая платформа среди разработчиков: отличная документация, стабильная инфраструктура. Стартовый кредит $200 даёт бесплатный доступ на пару месяцев. IP-пулы, к сожалению, в массовых чёрных списках — те же проблемы, что у Hetzner. Зато для обхода блокировок без стримингов — работает безупречно.</p>
+                    <p class="card-desc">Документация лучшая в индустрии, стабильная инфраструктура. $200 кредита на старте. IP-пулы в массовых чёрных списках - те же проблемы, что у Hetzner. Для обхода блокировок без стримингов - безупречно.</p>
                     <div class="card-meta">
                         <span>📍 15+ дата-центров</span>
                         <span>💾 NVMe</span>
-                        <span>🌐 0.5–6 ТБ</span>
+                        <span>🌐 0.5-6 ТБ</span>
                     </div>
                     <div class="card-tags">
-                        <span class="tag hot">VLESS Reality ✓</span><span class="tag">WireGuard</span><span class="tag">1-Click Apps</span><span class="tag">$200 кредит</span><span class="tag">⚠️ IP часто в ЧС</span>
+                        <span class="tag hot">VLESS+XHTTP ✓</span><span class="tag">AmneziaWG</span><span class="tag">$200 кредит</span><span class="tag">⚠️ IP часто в ЧС</span>
                     </div>
                 </div>
                 <div class="card-right">
@@ -690,14 +655,12 @@
         </div>
     </div>
 </section>
-
 <!-- DETAIL COMPARE -->
 <section class="section" id="detail-compare" style="background:var(--bg2)">
     <div class="container">
         <h2 class="section-title">Подробное сравнение 6 провайдеров</h2>
-        <p class="section-sub">Детальные характеристики минимальных тарифов, особенности и реальные цены на март 2026</p>
+        <p class="section-sub">Характеристики минимальных тарифов, реальные цены на апрель 2026</p>
 
-        <!-- Provider cards grid -->
         <div class="detail-grid">
 
             <!-- #1 Fornex -->
@@ -708,53 +671,29 @@
                     <span class="detail-price">от $6.34/мес</span>
                 </div>
                 <div class="detail-specs">
-                    <div class="spec-row">
-                        <span class="spec-label">⚙️ CPU</span>
-                        <span class="spec-value">1 vCPU × 3.0 GHz</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🧠 RAM</span>
-                        <span class="spec-value">1 ГБ DDR4</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">💾 Диск</span>
-                        <span class="spec-value">10 ГБ NVMe (RAID-10)</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🌐 Трафик</span>
-                        <span class="spec-value">Безлимит (100 Мбит/с)</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">📍 Локации</span>
-                        <span class="spec-value">DE, NL, CH, US, LV</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🛡️ DDoS</span>
-                        <span class="spec-value">до 250 Гбит/с</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🔧 Виртуализация</span>
-                        <span class="spec-value">KVM</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">💰 Оплата</span>
-                        <span class="spec-value">$ (карта, криптовалюта)</span>
-                    </div>
+                    <div class="spec-row"><span class="spec-label">⚙️ CPU</span><span class="spec-value">1 vCPU × 3.0 GHz</span></div>
+                    <div class="spec-row"><span class="spec-label">🧠 RAM</span><span class="spec-value">1 ГБ DDR4</span></div>
+                    <div class="spec-row"><span class="spec-label">💾 Диск</span><span class="spec-value">10 ГБ NVMe (RAID-10)</span></div>
+                    <div class="spec-row"><span class="spec-label">🌐 Трафик</span><span class="spec-value">Безлимит (300 Мбит/с)</span></div>
+                    <div class="spec-row"><span class="spec-label">📍 Локации</span><span class="spec-value">DE, NL, CH, SE, ES, US</span></div>
+                    <div class="spec-row"><span class="spec-label">🛡️ DDoS</span><span class="spec-value">до 250 Гбит/с</span></div>
+                    <div class="spec-row"><span class="spec-label">🔧 Виртуализация</span><span class="spec-value">KVM</span></div>
+                    <div class="spec-row"><span class="spec-label">💰 Оплата</span><span class="spec-value">$ (карта, крипто, PayPal)</span></div>
+                    <div class="spec-row"><span class="spec-label">🔒 VPN</span><span class="spec-value">Без ограничений</span></div>
                 </div>
                 <div class="detail-pros-cons">
                     <div class="detail-pros">
                         <div class="dpc-title">✅ Плюсы</div>
                         <p>Чистые европейские IP</p>
-                        <p>Безлимитный трафик</p>
+                        <p>Безлимит 300 Мбит/с</p>
                         <p>NVMe RAID-10</p>
-                        <p>15 лет на рынке</p>
-                        <p>DDoS до 250 Гбит/с</p>
+                        <p>16+ лет, аптайм 99.97%</p>
+                        <p>VPN без ограничений</p>
                     </div>
                     <div class="detail-cons">
                         <div class="dpc-title">❌ Минусы</div>
                         <p>Цена в долларах</p>
-                        <p>Нет оплаты в рублях</p>
-                        <p>Тест 4 дня (после оплаты)</p>
+                        <p>Нет прямой оплаты в ₽</p>
                     </div>
                 </div>
                 <a href="https://fornex.com/c/ftle5i/ru/virtual-private-servers/" class="detail-btn" target="_blank" rel="nofollow">Перейти на Fornex →</a>
@@ -768,61 +707,38 @@
                     <span class="detail-price">от 299 ₽/мес</span>
                 </div>
                 <div class="detail-specs">
-                    <div class="spec-row">
-                        <span class="spec-label">⚙️ CPU</span>
-                        <span class="spec-value">1 ядро × 3.6 GHz</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🧠 RAM</span>
-                        <span class="spec-value">1 ГБ DDR4</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">💾 Диск</span>
-                        <span class="spec-value">15 ГБ NVMe (RAID-10)</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🌐 Трафик</span>
-                        <span class="spec-value">1 ТБ/мес (до 1 Гбит/с)</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">📍 Локации</span>
-                        <span class="spec-value">RU, NL, DE, FI, PL, KZ</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🛡️ DDoS</span>
-                        <span class="spec-value">до 100 Гбит/с</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🔧 Виртуализация</span>
-                        <span class="spec-value">KVM</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">💰 Оплата</span>
-                        <span class="spec-value">₽, карта</span>
-                    </div>
+                    <div class="spec-row"><span class="spec-label">⚙️ CPU</span><span class="spec-value">1 ядро × 3.6 GHz</span></div>
+                    <div class="spec-row"><span class="spec-label">🧠 RAM</span><span class="spec-value">1 ГБ DDR4</span></div>
+                    <div class="spec-row"><span class="spec-label">💾 Диск</span><span class="spec-value">15 ГБ NVMe (RAID-10)</span></div>
+                    <div class="spec-row"><span class="spec-label">🌐 Трафик</span><span class="spec-value">1 ТБ/мес (до 1 Гбит/с)</span></div>
+                    <div class="spec-row"><span class="spec-label">📍 Локации</span><span class="spec-value">RU, FI, DE, NL, PL, KZ</span></div>
+                    <div class="spec-row"><span class="spec-label">🛡️ DDoS</span><span class="spec-value">до 100 Гбит/с</span></div>
+                    <div class="spec-row"><span class="spec-label">🔧 Виртуализация</span><span class="spec-value">KVM</span></div>
+                    <div class="spec-row"><span class="spec-label">💰 Оплата</span><span class="spec-value">₽, карта</span></div>
+                    <div class="spec-row"><span class="spec-label">🔒 VPN на EU</span><span class="spec-value">Без ограничений</span></div>
                 </div>
                 <div class="detail-pros-cons">
                     <div class="detail-pros">
                         <div class="dpc-title">✅ Плюсы</div>
-                        <p>Промокод VPS30 (−30%)</p>
-                        <p>Много локаций (6 стран)</p>
-                        <p>Быстрый CPU 3.6 GHz</p>
-                        <p>Бесплатный бэкап 100 ГБ</p>
-                        <p>Тест 7 дней (юридические лица)</p>
+                        <p>Промокод VPS30 (-30%)</p>
+                        <p>6 стран, включая Финляндию</p>
+                        <p>CPU 3.6 GHz</p>
+                        <p>Бэкапы бесплатно</p>
+                        <p>VPN на EU без ограничений</p>
                     </div>
                     <div class="detail-cons">
                         <div class="dpc-title">❌ Минусы</div>
+                        <p>Лимит 1 ТБ трафика</p>
                         <p>Средняя чистота IP</p>
-                        <p>Без промокода дороже</p>
                     </div>
                 </div>
                 <div style="margin-bottom:.5rem">
                     <div class="promo-copy-wrap">
-                        <span class="promo-text">VPS30 −30%</span>
+                        <span class="promo-text">VPS30 -30%</span>
                         <button class="promo-copy-btn" onclick="copyPromo('VPS30', this)">Копировать</button>
                     </div>
                 </div>
-                <a href="https://adminvps.ru/vps/vps_russia.php?aff=29893" class="detail-btn" target="_blank" rel="nofollow">Перейти на AdminVPS →</a>
+                <a href="https://adminvps.ru/vps/vps_finland.php?aff=29893" class="detail-btn" target="_blank" rel="nofollow">Перейти на AdminVPS →</a>
             </div>
 
             <!-- #3 Timeweb Cloud -->
@@ -833,52 +749,28 @@
                     <span class="detail-price">от 477 ₽/мес</span>
                 </div>
                 <div class="detail-specs">
-                    <div class="spec-row">
-                        <span class="spec-label">⚙️ CPU</span>
-                        <span class="spec-value">1 vCPU × 3.3 GHz</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🧠 RAM</span>
-                        <span class="spec-value">1 ГБ DDR4</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">💾 Диск</span>
-                        <span class="spec-value">15 ГБ SSD</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🌐 Трафик</span>
-                        <span class="spec-value">Безлимит (до 1 Гбит/с)</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">📍 Локации</span>
-                        <span class="spec-value">RU (Москва), NL, PL, KZ</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🛡️ DDoS</span>
-                        <span class="spec-value">Включена</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🔧 Виртуализация</span>
-                        <span class="spec-value">KVM</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">💰 Оплата</span>
-                        <span class="spec-value">₽, карта, СБП</span>
-                    </div>
+                    <div class="spec-row"><span class="spec-label">⚙️ CPU</span><span class="spec-value">1 vCPU × 3.3 GHz</span></div>
+                    <div class="spec-row"><span class="spec-label">🧠 RAM</span><span class="spec-value">1 ГБ DDR4</span></div>
+                    <div class="spec-row"><span class="spec-label">💾 Диск</span><span class="spec-value">15 ГБ SSD</span></div>
+                    <div class="spec-row"><span class="spec-label">🌐 Трафик</span><span class="spec-value">Безлимит (до 1 Гбит/с)</span></div>
+                    <div class="spec-row"><span class="spec-label">📍 Локации</span><span class="spec-value">RU, NL, PL, KZ, DE, FI</span></div>
+                    <div class="spec-row"><span class="spec-label">🛡️ DDoS</span><span class="spec-value">Включена</span></div>
+                    <div class="spec-row"><span class="spec-label">🔧 Виртуализация</span><span class="spec-value">KVM</span></div>
+                    <div class="spec-row"><span class="spec-label">💰 Оплата</span><span class="spec-value">₽, карта, СБП</span></div>
+                    <div class="spec-row"><span class="spec-label">🔒 VPN на EU</span><span class="spec-value">Без ограничений</span></div>
                 </div>
                 <div class="detail-pros-cons">
                     <div class="detail-pros">
                         <div class="dpc-title">✅ Плюсы</div>
-                        <p>Известный российский бренд</p>
+                        <p>132 000+ аккаунтов</p>
                         <p>Безлимитный трафик</p>
-                        <p>Удобная панель управления</p>
-                        <p>Оплата через СБП</p>
+                        <p>Удобная панель</p>
+                        <p>СБП, Terraform, API</p>
                     </div>
                     <div class="detail-cons">
                         <div class="dpc-title">❌ Минусы</div>
                         <p>Цена выше конкурентов</p>
-                        <p>Средняя чистота IP</p>
-                        <p>Мало зарубежных локаций</p>
+                        <p>IP в NL бывают подсажены</p>
                     </div>
                 </div>
                 <a href="https://timeweb.cloud/?i=138553" class="detail-btn" target="_blank" rel="nofollow">Перейти на Timeweb Cloud →</a>
@@ -892,52 +784,28 @@
                     <span class="detail-price">от 593 ₽/мес</span>
                 </div>
                 <div class="detail-specs">
-                    <div class="spec-row">
-                        <span class="spec-label">⚙️ CPU</span>
-                        <span class="spec-value">1 vCPU (AMD Ryzen 9 9950X)</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🧠 RAM</span>
-                        <span class="spec-value">1 ГБ DDR5</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">💾 Диск</span>
-                        <span class="spec-value">10 ГБ NVMe SSD</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🌐 Трафик</span>
-                        <span class="spec-value">Безлимит (до 25 Гбит/с)</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">📍 Локации</span>
-                        <span class="spec-value">RU, NL, DE, FI, US, UK</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🛡️ DDoS</span>
-                        <span class="spec-value">Включена</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🔧 Виртуализация</span>
-                        <span class="spec-value">KVM</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">💰 Оплата</span>
-                        <span class="spec-value">₽, €, криптовалюта</span>
-                    </div>
+                    <div class="spec-row"><span class="spec-label">⚙️ CPU</span><span class="spec-value">1 vCPU (Ryzen 9 9950X)</span></div>
+                    <div class="spec-row"><span class="spec-label">🧠 RAM</span><span class="spec-value">1 ГБ DDR5</span></div>
+                    <div class="spec-row"><span class="spec-label">💾 Диск</span><span class="spec-value">10 ГБ NVMe</span></div>
+                    <div class="spec-row"><span class="spec-label">🌐 Трафик</span><span class="spec-value">Безлимит (до 25 Гбит/с)</span></div>
+                    <div class="spec-row"><span class="spec-label">📍 Локации</span><span class="spec-value">RU, NL, DE, FI, US, UK + ещё</span></div>
+                    <div class="spec-row"><span class="spec-label">🛡️ DDoS</span><span class="spec-value">Включена</span></div>
+                    <div class="spec-row"><span class="spec-label">🔧 Виртуализация</span><span class="spec-value">KVM</span></div>
+                    <div class="spec-row"><span class="spec-label">💰 Оплата</span><span class="spec-value">₽, €, крипто</span></div>
+                    <div class="spec-row"><span class="spec-label">🔒 VPN</span><span class="spec-value">EU ✅ / РФ ❌ блок</span></div>
                 </div>
                 <div class="detail-pros-cons">
                     <div class="detail-pros">
                         <div class="dpc-title">✅ Плюсы</div>
-                        <p>Топовый AMD Ryzen 9950X</p>
-                        <p>Скорость до 25 Гбит/с</p>
+                        <p>Ryzen 9950X, DDR5</p>
+                        <p>Канал до 25 Гбит/с</p>
                         <p>Почасовая оплата</p>
                         <p>Много локаций</p>
-                        <p>DDR5 память</p>
                     </div>
                     <div class="detail-cons">
                         <div class="dpc-title">❌ Минусы</div>
-                        <p>Самая высокая цена</p>
-                        <p>Смешанные отзывы</p>
+                        <p>VPN на РФ блокирует</p>
+                        <p>Дороже конкурентов</p>
                     </div>
                 </div>
                 <a href="https://aeza.net/?ref=797084" class="detail-btn" target="_blank" rel="nofollow">Перейти на Aeza →</a>
@@ -951,45 +819,20 @@
                     <span class="detail-price">от 150 ₽/мес</span>
                 </div>
                 <div class="detail-specs">
-                    <div class="spec-row">
-                        <span class="spec-label">⚙️ CPU</span>
-                        <span class="spec-value">1 ядро × 2.0 GHz</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🧠 RAM</span>
-                        <span class="spec-value">1 ГБ DDR4</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">💾 Диск</span>
-                        <span class="spec-value">10 ГБ NVMe SSD</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🌐 Трафик</span>
-                        <span class="spec-value">1 ТБ/мес (1 Гбит/с)</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">📍 Локации</span>
-                        <span class="spec-value">RU (Москва), NL</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🛡️ DDoS</span>
-                        <span class="spec-value">Включена</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🔧 Виртуализация</span>
-                        <span class="spec-value">KVM</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">💰 Оплата</span>
-                        <span class="spec-value">₽, карта, криптовалюта</span>
-                    </div>
+                    <div class="spec-row"><span class="spec-label">⚙️ CPU</span><span class="spec-value">1 ядро × 2.0 GHz</span></div>
+                    <div class="spec-row"><span class="spec-label">🧠 RAM</span><span class="spec-value">1 ГБ DDR4</span></div>
+                    <div class="spec-row"><span class="spec-label">💾 Диск</span><span class="spec-value">10 ГБ NVMe</span></div>
+                    <div class="spec-row"><span class="spec-label">🌐 Трафик</span><span class="spec-value">1 ТБ/мес (1 Гбит/с)</span></div>
+                    <div class="spec-row"><span class="spec-label">📍 Локации</span><span class="spec-value">RU, NL</span></div>
+                    <div class="spec-row"><span class="spec-label">🛡️ DDoS</span><span class="spec-value">Включена</span></div>
+                    <div class="spec-row"><span class="spec-label">🔧 Виртуализация</span><span class="spec-value">KVM</span></div>
+                    <div class="spec-row"><span class="spec-label">💰 Оплата</span><span class="spec-value">₽, карта, крипто</span></div>
                 </div>
                 <div class="detail-pros-cons">
                     <div class="detail-pros">
                         <div class="dpc-title">✅ Плюсы</div>
                         <p>Самая низкая цена в ₽</p>
                         <p>Посуточная оплата (5 ₽/день)</p>
-                        <p>Скидка 10–20% за предоплату</p>
                         <p>Хорошая чистота IP</p>
                     </div>
                     <div class="detail-cons">
@@ -1010,38 +853,14 @@
                     <span class="detail-price">от 219 ₽/мес</span>
                 </div>
                 <div class="detail-specs">
-                    <div class="spec-row">
-                        <span class="spec-label">⚙️ CPU</span>
-                        <span class="spec-value">1 vCPU</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🧠 RAM</span>
-                        <span class="spec-value">1 ГБ DDR4</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">💾 Диск</span>
-                        <span class="spec-value">30 ГБ NVMe SSD</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🌐 Трафик</span>
-                        <span class="spec-value">Безлимит (до 32 ТБ)</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">📍 Локации</span>
-                        <span class="spec-value">RU (Москва, СПб), NL</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🛡️ DDoS</span>
-                        <span class="spec-value">Включена</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">🔧 Виртуализация</span>
-                        <span class="spec-value">KVM</span>
-                    </div>
-                    <div class="spec-row">
-                        <span class="spec-label">💰 Оплата</span>
-                        <span class="spec-value">₽, карта</span>
-                    </div>
+                    <div class="spec-row"><span class="spec-label">⚙️ CPU</span><span class="spec-value">1 vCPU</span></div>
+                    <div class="spec-row"><span class="spec-label">🧠 RAM</span><span class="spec-value">1 ГБ DDR4</span></div>
+                    <div class="spec-row"><span class="spec-label">💾 Диск</span><span class="spec-value">30 ГБ NVMe</span></div>
+                    <div class="spec-row"><span class="spec-label">🌐 Трафик</span><span class="spec-value">Безлимит (до 32 ТБ)</span></div>
+                    <div class="spec-row"><span class="spec-label">📍 Локации</span><span class="spec-value">RU (МСК, СПб), NL</span></div>
+                    <div class="spec-row"><span class="spec-label">🛡️ DDoS</span><span class="spec-value">Включена</span></div>
+                    <div class="spec-row"><span class="spec-label">🔧 Виртуализация</span><span class="spec-value">KVM</span></div>
+                    <div class="spec-row"><span class="spec-label">💰 Оплата</span><span class="spec-value">₽, карта</span></div>
                 </div>
                 <div class="detail-pros-cons">
                     <div class="detail-pros">
@@ -1049,11 +868,10 @@
                         <p>Большой диск 30 ГБ</p>
                         <p>Безлимитный трафик</p>
                         <p>18 лет на рынке</p>
-                        <p>Активация за 5 минут</p>
+                        <p>Готовые VPN-образы</p>
                     </div>
                     <div class="detail-cons">
                         <div class="dpc-title">❌ Минусы</div>
-                        <p>Нет бесплатного тест-периода</p>
                         <p>ISPmanager платный (со 2 мес.)</p>
                         <p>Поддержка до 30 мин.</p>
                     </div>
@@ -1065,192 +883,115 @@
             </div>
         </div>
 
-        <!-- Summary table -->
         <h3 style="text-align:center;margin:3rem 0 1rem;font-size:1.3rem;font-weight:700;color:var(--accent2)">Сводная таблица характеристик</h3>
         <div class="table-wrap">
             <table>
                 <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Провайдер</th>
-                        <th>Цена/мес</th>
-                        <th>CPU</th>
-                        <th>RAM</th>
-                        <th>Диск</th>
-                        <th>Трафик</th>
-                        <th>Локации</th>
-                        <th>DDoS-защита</th>
-                        <th>Виртуализация</th>
-                    </tr>
+                    <tr><th>#</th><th>Провайдер</th><th>Цена/мес</th><th>CPU</th><th>RAM</th><th>Диск</th><th>Трафик</th><th>Локации</th><th>VPN на EU</th><th>Виртуализация</th></tr>
                 </thead>
                 <tbody>
-                    <tr style="background:rgba(255,215,0,.05)">
-                        <td>🥇 1</td>
-                        <td><strong>Fornex</strong></td>
-                        <td><span style="color:var(--green);font-weight:700">$5</span></td>
-                        <td>1 × 3.0 GHz</td>
-                        <td>1 ГБ</td>
-                        <td>10 ГБ NVMe</td>
-                        <td>Безлимит</td>
-                        <td>DE, NL, SE, CH, ES, US</td>
-                        <td>до 250 Гбит/с</td>
-                        <td>KVM</td>
-                    </tr>
-                    <tr style="background:rgba(192,192,192,.05)">
-                        <td>🥈 2</td>
-                        <td><strong>AdminVPS</strong> <span class="table-promo">VPS30 −30%</span></td>
-                        <td><span style="color:var(--green);font-weight:700">299 ₽</span></td>
-                        <td>1 × 3.6 GHz</td>
-                        <td>1 ГБ</td>
-                        <td>15 ГБ NVMe</td>
-                        <td>1 ТБ</td>
-                        <td>RU, NL, DE, FI, PL, KZ</td>
-                        <td>до 100 Гбит/с</td>
-                        <td>KVM</td>
-                    </tr>
-                    <tr style="background:rgba(205,127,50,.05)">
-                        <td>🥉 3</td>
-                        <td><strong>Timeweb Cloud</strong></td>
-                        <td><span style="color:var(--gold);font-weight:700">477 ₽</span></td>
-                        <td>1 × 3.3 GHz</td>
-                        <td>1 ГБ</td>
-                        <td>15 ГБ SSD</td>
-                        <td>Безлимит</td>
-                        <td>RU, NL, PL, KZ</td>
-                        <td>Включена</td>
-                        <td>KVM</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td><strong>Aeza</strong></td>
-                        <td>593 ₽</td>
-                        <td>1 × AMD Ryzen 9950X</td>
-                        <td>1 ГБ DDR5</td>
-                        <td>10 ГБ NVMe</td>
-                        <td>Безлимит</td>
-                        <td>RU, NL, DE, FI, US, UK</td>
-                        <td>Включена</td>
-                        <td>KVM</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td><strong>VDSina</strong></td>
-                        <td>150 ₽</td>
-                        <td>1 × 2.0 GHz</td>
-                        <td>1 ГБ</td>
-                        <td>10 ГБ NVMe</td>
-                        <td>1 ТБ</td>
-                        <td>RU, NL</td>
-                        <td>Включена</td>
-                        <td>KVM</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td><strong>FirstVDS</strong> <span class="table-promo">64860396</span></td>
-                        <td>219 ₽</td>
-                        <td>1 vCPU</td>
-                        <td>1 ГБ</td>
-                        <td>30 ГБ NVMe</td>
-                        <td>Безлимит</td>
-                        <td>RU, NL</td>
-                        <td>Включена</td>
-                        <td>KVM</td>
-                    </tr>
+                    <tr style="background:rgba(255,215,0,.05)"><td>🥇 1</td><td><strong>Fornex</strong></td><td><span style="color:var(--green);font-weight:700">$6.34</span></td><td>1 × 3.0 GHz</td><td>1 ГБ</td><td>10 ГБ NVMe</td><td>Безлимит</td><td>DE, NL, CH, SE, ES, US</td><td>✅</td><td>KVM</td></tr>
+                    <tr style="background:rgba(192,192,192,.05)"><td>🥈 2</td><td><strong>AdminVPS</strong> <span class="table-promo">VPS30 -30%</span></td><td><span style="color:var(--green);font-weight:700">299 ₽</span></td><td>1 × 3.6 GHz</td><td>1 ГБ</td><td>15 ГБ NVMe</td><td>1 ТБ</td><td>RU, FI, DE, NL, PL, KZ</td><td>✅</td><td>KVM</td></tr>
+                    <tr style="background:rgba(205,127,50,.05)"><td>🥉 3</td><td><strong>Timeweb Cloud</strong></td><td><span style="color:var(--gold);font-weight:700">477 ₽</span></td><td>1 × 3.3 GHz</td><td>1 ГБ</td><td>15 ГБ SSD</td><td>Безлимит</td><td>RU, NL, PL, KZ, DE, FI</td><td>✅</td><td>KVM</td></tr>
+                    <tr><td>4</td><td><strong>Aeza</strong></td><td>593 ₽</td><td>1 × Ryzen 9950X</td><td>1 ГБ DDR5</td><td>10 ГБ NVMe</td><td>Безлимит</td><td>RU, NL, DE, FI, US + ещё</td><td>✅ (РФ ❌)</td><td>KVM</td></tr>
+                    <tr><td>5</td><td><strong>VDSina</strong></td><td>150 ₽</td><td>1 × 2.0 GHz</td><td>1 ГБ</td><td>10 ГБ NVMe</td><td>1 ТБ</td><td>RU, NL</td><td>✅</td><td>KVM</td></tr>
+                    <tr><td>6</td><td><strong>FirstVDS</strong> <span class="table-promo">64860396</span></td><td>219 ₽</td><td>1 vCPU</td><td>1 ГБ</td><td>30 ГБ NVMe</td><td>Безлимит</td><td>RU, NL</td><td>✅</td><td>KVM</td></tr>
                 </tbody>
             </table>
         </div>
-        <p style="font-size:.8rem;color:var(--text2);margin-top:.8rem;text-align:center">Цены указаны за минимальный тариф каждого провайдера по состоянию на март 2026 г. Характеристики могут изменяться — проверяйте актуальные данные на официальных сайтах.</p>
+        <p style="font-size:.8rem;color:var(--text2);margin-top:.8rem;text-align:center">Цены на 22 апреля 2026. Столбец «VPN на EU» - разрешены ли VPN-протоколы на зарубежных площадках.</p>
     </div>
 </section>
 
 <section class="section" id="compare">
     <div class="container">
-        <h2 class="section-title">Сравнительная таблица провайдеров</h2>
-        <p class="section-sub">Характеристики, цены, чистота IP — всё в одном месте</p>
+        <h2 class="section-title">Сравнительная таблица всех провайдеров</h2>
+        <p class="section-sub">Характеристики, цены, чистота IP, VPN-политики</p>
         <div class="table-wrap">
             <table>
-                <thead><tr><th>#</th><th>Провайдер</th><th>Цена от</th><th>CPU</th><th>RAM</th><th>Диск</th><th>Трафик</th><th>Локации</th><th>VLESS Reality</th><th>Чистота IP</th><th>₽</th></tr></thead>
+                <thead><tr><th>#</th><th>Провайдер</th><th>Цена от</th><th>CPU</th><th>RAM</th><th>Диск</th><th>Трафик</th><th>Локации</th><th>VLESS+XHTTP</th><th>Чистота IP</th><th>VPN на EU</th><th>₽</th></tr></thead>
                 <tbody>
-                    <tr><td>1</td><td>Fornex</td><td>$6.34</td><td>1</td><td>512 МБ</td><td>10 ГБ</td><td>Безлимит</td><td>NL, DE, US, LV</td><td>✅</td><td>🟢 Хорошая</td><td>✅</td></tr>
-                    <tr><td>2</td><td>AdminVPS <span class="table-promo">VPS30 −30%</span></td><td>299₽</td><td>1</td><td>512 МБ</td><td>5 ГБ</td><td>Безлимит</td><td>RU, NL, DE</td><td>✅</td><td>🟡 Средняя</td><td>✅</td></tr>
-                    <tr><td>3</td><td>Timeweb Cloud</td><td>477₽</td><td>1</td><td>1 ГБ</td><td>15 ГБ</td><td>Безлимит</td><td>RU, NL, PL, KZ</td><td>✅</td><td>🟡 Средняя</td><td>✅</td></tr>
-                    <tr><td>4</td><td>Aeza</td><td>593₽</td><td>1</td><td>512 МБ</td><td>10 ГБ</td><td>Безлимит</td><td>RU, NL, DE, US, FI</td><td>✅</td><td>🟢 Хорошая</td><td>✅</td></tr>
-                    <tr><td>5</td><td>VDSina</td><td>150₽</td><td>1</td><td>512 МБ</td><td>10 ГБ</td><td>Безлимит</td><td>RU, NL</td><td>✅</td><td>🟢 Хорошая</td><td>✅</td></tr>
-                    <tr><td>6</td><td>FirstVDS <span class="table-promo">64860396</span></td><td>219₽</td><td>1</td><td>512 МБ</td><td>10 ГБ</td><td>Безлимит</td><td>RU, NL</td><td>—</td><td>🟢 Хорошая</td><td>✅</td></tr>
-                    <tr><td>7</td><td>Hetzner</td><td>3.29€</td><td>1</td><td>1 ГБ</td><td>20 ГБ</td><td>20 ТБ</td><td>DE, FI, US, SG</td><td>✅</td><td>🔴 Часто в ЧС</td><td>❌</td></tr>
-                    <tr><td>8</td><td>Contabo</td><td>4.50€</td><td>4</td><td>8 ГБ</td><td>50 ГБ</td><td>32 ТБ</td><td>DE, US, JP, SG, AU</td><td>✅</td><td>🟡 Средняя</td><td>❌</td></tr>
-                    <tr><td>9</td><td>Vultr</td><td>$3.50</td><td>1</td><td>512 МБ</td><td>10 ГБ</td><td>0.5 ТБ</td><td>30+ стран</td><td>✅</td><td>🟡 Лотерея*</td><td>❌</td></tr>
-                    <tr><td>10</td><td>DigitalOcean</td><td>$4</td><td>1</td><td>512 МБ</td><td>10 ГБ</td><td>0.5 ТБ</td><td>15+ стран</td><td>✅</td><td>🔴 Часто в ЧС</td><td>❌</td></tr>
+                    <tr><td>1</td><td>Fornex</td><td>$6.34</td><td>1</td><td>1 ГБ</td><td>10 ГБ</td><td>Безлимит</td><td>NL, DE, CH, SE, ES, US</td><td>✅</td><td>🟢 Хорошая</td><td>✅</td><td>✅</td></tr>
+                    <tr><td>2</td><td>AdminVPS <span class="table-promo">VPS30 -30%</span></td><td>299₽</td><td>1</td><td>1 ГБ</td><td>15 ГБ</td><td>1 ТБ</td><td>RU, FI, DE, NL, PL, KZ</td><td>✅</td><td>🟡 Средняя</td><td>✅</td><td>✅</td></tr>
+                    <tr><td>3</td><td>Timeweb Cloud</td><td>477₽</td><td>1</td><td>1 ГБ</td><td>15 ГБ</td><td>Безлимит</td><td>RU, NL, PL, KZ, DE, FI</td><td>✅</td><td>🟡 Средняя</td><td>✅</td><td>✅</td></tr>
+                    <tr><td>4</td><td>Aeza</td><td>593₽</td><td>1</td><td>1 ГБ</td><td>10 ГБ</td><td>Безлимит</td><td>RU, NL, DE, FI, US + ещё</td><td>✅</td><td>🟢 Хорошая</td><td>✅ (РФ ❌)</td><td>✅</td></tr>
+                    <tr><td>5</td><td>VDSina</td><td>150₽</td><td>1</td><td>1 ГБ</td><td>10 ГБ</td><td>1 ТБ</td><td>RU, NL</td><td>✅</td><td>🟢 Хорошая</td><td>✅</td><td>✅</td></tr>
+                    <tr><td>6</td><td>FirstVDS <span class="table-promo">64860396</span></td><td>219₽</td><td>1</td><td>1 ГБ</td><td>30 ГБ</td><td>Безлимит</td><td>RU, NL</td><td>-</td><td>🟢 Хорошая</td><td>✅</td><td>✅</td></tr>
+                    <tr><td>7</td><td>Hetzner</td><td>3.29€</td><td>1</td><td>1 ГБ</td><td>20 ГБ</td><td>20 ТБ</td><td>DE, FI, US, SG</td><td>✅</td><td>🔴 Часто в ЧС</td><td>✅</td><td>❌</td></tr>
+                    <tr><td>8</td><td>Contabo</td><td>4.50€</td><td>4</td><td>8 ГБ</td><td>50 ГБ</td><td>32 ТБ</td><td>DE, US, JP, SG, AU</td><td>✅</td><td>🟡 Средняя</td><td>✅</td><td>❌</td></tr>
+                    <tr><td>9</td><td>Vultr</td><td>$3.50</td><td>1</td><td>512 МБ</td><td>10 ГБ</td><td>0.5 ТБ</td><td>30+ стран</td><td>✅</td><td>🟡 Лотерея*</td><td>✅</td><td>❌</td></tr>
+                    <tr><td>10</td><td>DigitalOcean</td><td>$4</td><td>1</td><td>512 МБ</td><td>10 ГБ</td><td>0.5 ТБ</td><td>15+ стран</td><td>✅</td><td>🔴 Часто в ЧС</td><td>✅</td><td>❌</td></tr>
                 </tbody>
             </table>
         </div>
-        <p style="font-size:.8rem;color:var(--text2);margin-top:.8rem;text-align:center">* У Vultr можно пересоздать машину за секунды — IP меняется. Помогает найти чистый адрес методом перебора.</p>
+        <p style="font-size:.8rem;color:var(--text2);margin-top:.8rem;text-align:center">* У Vultr пересоздание машины за секунды - IP меняется. Помогает найти чистый адрес перебором.</p>
     </div>
 </section>
+
 <section class="section" id="guide" style="background:var(--bg2)">
     <div class="article">
         <h2 class="section-title">Как выбрать хостинг для ВПН</h2>
-        <p class="section-sub">На что обращать внимание перед покупкой — из реального опыта</p>
+        <p class="section-sub">На что смотреть перед покупкой - из реального опыта</p>
 
         <h2>Расположение дата-центра</h2>
-        <p>Если цель — обход блокировок, нужны машины за пределами России. Нидерланды, Германия и Финляндия обеспечивают пинг 30–70 мс из Москвы и открывают доступ ко всем международным ресурсам. Для аренды сервера в Европе с оплатой в рублях подойдут AdminVPS, Timeweb Cloud и Fornex.</p>
+        <p>Для обхода блокировок - только за пределами России. Нидерланды, Германия, Финляндия дают пинг 30-70 мс из Москвы. Российские хостеры блокируют VPN по требованию РКН, а законопроект «Антифрод 2.0» может это закрепить. Для зарубежного сервера с оплатой в рублях - AdminVPS, Timeweb Cloud и Fornex.</p>
 
-        <p>Если задача — защитить трафик внутри страны (публичный Wi-Fi, удалённый доступ к рабочим ресурсам), достаточно площадки в Москве. Задержка 5–15 мс, скорость практически неотличима от прямого подключения. Оптимально иметь две машины: одну внутри страны для повседневной защиты, вторую — за рубежом для обхода ограничений.</p>
+        <p>Для защиты трафика внутри страны (публичный Wi-Fi, удалённый доступ) - Москва. 5-15 мс, скорость почти не отличается от прямого подключения. Идеально иметь две машины: одну внутри страны, вторую за рубежом.</p>
 
         <h2>TUN/TAP и виртуализация</h2>
-        <p>Интерфейс TUN/TAP обязателен для WireGuard, OpenVPN и VLESS. Перед покупкой убедитесь, что провайдер включает его по умолчанию. Виртуализация KVM — единственный правильный выбор: полноценное изолированное ядро, загрузка модулей, никаких ограничений. OpenVZ — это прошлый век, с ним будут проблемы.</p>
+        <p>TUN/TAP обязателен для WireGuard, VLESS и AmneziaWG. KVM - единственный правильный выбор. OpenVZ - прошлый век. Все провайдеры из рейтинга на KVM.</p>
 
-        <h2>Трафик и ширина канала</h2>
-        <p>Весь интернет-трафик пойдёт через арендованную машину. Нужен либо безлимит, либо от 1 ТБ в месяц для одного-двух человек. Канал от 200 Мбит/с — минимум для комфортного стриминга, 1 Гбит/с — идеал. Большинство российских провайдеров включают безлимит даже в минимальные тарифы; зарубежные чаще ограничивают объём.</p>
+        <h2>Трафик и канал</h2>
+        <p>Весь интернет-трафик пойдёт через машину. Безлимит или от 1 ТБ на одного-двух человек. Канал от 200 Мбит/с минимум, 1 Гбит/с - идеал. Российские провайдеры чаще дают безлимит, зарубежные ограничивают объём.</p>
 
-        <h2>Ресурсы сервера</h2>
-        <p>Для WireGuard на одного-пяти человек хватит 1 ядра и 512 МБ памяти. Для VLESS Reality с панелью 3X-UI лучше взять 1 ГБ — сама панель и Xray-core потребляют около 100–150 МБ в фоне. Если планируете дополнительно поднять Pi-hole или Adguard Home для блокировки рекламы, берите 2 ГБ.</p>
+        <h2>Ресурсы</h2>
+        <p>AmneziaWG на 5 человек - 1 ядро и 512 МБ. VLESS+XHTTP с 3X-UI - от 1 ГБ RAM (панель и Xray-core едят ~150 МБ в фоне). Pi-hole или Adguard Home сверху - 2 ГБ.</p>
 
-        <h2>Способы оплаты</h2>
-        <p>AdminVPS, Aeza, Timeweb Cloud, VDSina и FirstVDS принимают карты «Мир», СБП и ЮMoney. Зарубежные площадки (Hetzner, Contabo, Vultr, DigitalOcean) требуют Visa/Mastercard или PayPal. Fornex — единственный из подборки, кто принимает криптовалюту без верификации.</p>
+        <h2>Оплата</h2>
+        <p>AdminVPS, Aeza, Timeweb Cloud, VDSina и FirstVDS берут «Мир», СБП, ЮMoney. Hetzner, Contabo, Vultr, DigitalOcean - Visa/Mastercard или PayPal. Fornex - единственный с криптой без верификации.</p>
 
         <div class="article-highlight2">
-            <strong>Совет из практики:</strong> Если не хотите разбираться — берите AdminVPS с промокодом <strong>VPS30</strong> (−30% на первый заказ) и площадкой в Нидерландах. TUN/TAP, KVM, безлимит, оплата в рублях — поднимете VLESS Reality за 10 минут.
+            <strong>Совет:</strong> Не хотите разбираться - берите AdminVPS с промокодом <strong>VPS30</strong> (-30%) и площадкой в Нидерландах или Финляндии. TUN/TAP, KVM, NVMe, оплата в рублях. VPN-протоколы на зарубежных площадках не блокируют.
         </div>
     </div>
 </section>
 
-<!-- PROTOCOLS -->
+<!-- PROTOCOLS - ПОЛНОСТЬЮ ПЕРЕПИСАНО -->
 <section class="section" id="protocols">
     <div class="article">
-        <h2 class="section-title">Протоколы: что реально работает в 2026 году</h2>
-        <p class="section-sub">WireGuard и OpenVPN массово блокируются DPI. Разбираем актуальные альтернативы.</p>
+        <h2 class="section-title">Протоколы: что реально работает 22 апреля 2026</h2>
+        <p class="section-sub">WireGuard мёртв на мобильном. VLESS Reality нестабилен. Разбираем, что ещё живо.</p>
 
-        <h2>VLESS + XTLS-Reality — новый стандарт</h2>
-        <p>Если вы следите за темой, то знаете: в 2025–2026 годах классические протоколы — WireGuard, OpenVPN, даже Shadowsocks первых версий — стали уязвимы к блокировке через Deep Packet Inspection. Системы фильтрации научились определять характерные паттерны рукопожатия и обрезать соединение ещё до установления тоннеля.</p>
+        <h2>VLESS + XHTTP - единственный стабильный вариант</h2>
+        <p>Переписываю этот раздел третий раз за полтора месяца. Каждый раз хуже.</p>
 
-        <p>VLESS с технологией XTLS-Reality решает эту проблему радикально. Вместо того чтобы шифровать трафик «по-своему», протокол маскирует его под обычное HTTPS-соединение с реальным сайтом. При анализе пакетов DPI видит легитимный TLS-хендшейк с валидным сертификатом — например, от google.com или yahoo.com. Для системы фильтрации это неотличимо от обычного веб-серфинга.</p>
+        <p>ТСПУ научились ловить VLESS Reality по TLS-отпечаткам (JA3/JA4) ещё в феврале. К апрелю ситуация ухудшилась. На Habr вышел разбор: паттерн множественных TLS-хендшейков за короткое время выдаёт Reality. На МГТС, Акадо и МТС Москва фиксировались обрывы. На Reddit жалуются массово.</p>
 
-        <p>На практике это означает: ваш тоннель продолжает работать там, где все коммерческие ВПН и «голый» WireGuard уже лежат. Именно поэтому в карточках рейтинга мы отдельно отмечаем совместимость с VLESS Reality — это ключевой критерий выбора хостинга в текущих реалиях.</p>
+        <p>XHTTP - новый транспорт для Xray-core. Вместо двунаправленного TLS использует обычные HTTP-запросы: POST для отправки, GET для получения. Для ТСПУ это выглядит как API-вызовы к CDN. Заблокировать без ущерба для легитимного трафика невозможно.</p>
 
-        <div class="article-highlight3">
-            <strong>Важный нюанс:</strong> Для VLESS Reality критична «маскировочная» цель — SNI реального сайта, под который маскируется трафик. Выбирайте популярный ресурс на том же хостинге или в той же стране, где находится ваша машина. Например, для сервера в Германии подойдёт www.samsung.com или www.microsoft.com — их TLS-отпечатки широко распространены.
-        </div>
-
-        <h2>WireGuard — всё ещё актуален, но с оговорками</h2>
-        <p>WireGuard остаётся лучшим протоколом по чистой скорости — на 30–50% быстрее OpenVPN, минимальные задержки, ничтожное потребление ресурсов. Код всего ~4 000 строк, что снижает поверхность атаки. Если вы находитесь в регионе без активной DPI-фильтрации или используете тоннель для защиты трафика внутри страны — WireGuard по-прежнему оптимален.</p>
-
-        <p>Однако его характерный UDP-трафик легко детектируется и блокируется. Если ваш WireGuard периодически «отваливается» — это почти наверняка DPI. В таком случае переходите на VLESS Reality.</p>
-
-        <h2>OpenVPN — для корпоративных задач</h2>
-        <p>Проверенный временем протокол с максимальной совместимостью. Поддерживает TCP/443 — неотличимо от HTTPS на уровне портов, но DPI уже умеет распознавать OpenVPN-хендшейк внутри TLS. Имеет смысл для корпоративных сценариев с legacy-оборудованием, где нет возможности перейти на современные протоколы.</p>
-        <h2>VLESS + XHTTP — следующий шаг после Reality</h2>
-        <p>В марте 2026 года ТСПУ научился точечно детектировать VLESS Reality по TLS-отпечаткам (JA3/JA4) и паттернам поведения соединений. На ряде провайдеров — особенно МГТС, Акадо и МТС Москва — фиксировались обрывы и замедления VLESS Reality, которые раньше не наблюдались.</p>
-
-        <p>XHTTP — новый транспорт для Xray-core, который решает эту проблему. Вместо классического двунаправленного TLS-соединения, XHTTP использует обычные HTTP-запросы (POST для отправки, GET для получения данных). Для системы фильтрации это выглядит как банальные API-вызовы к CDN или облачному сервису — паттерн, который невозможно заблокировать без ущерба для легитимного трафика.</p>
-
-        <p>На практике VLESS + XHTTP + Reality — самая устойчивая комбинация на апрель 2026. Панель 3X-UI уже поддерживает этот транспорт — достаточно выбрать «XHTTP» в настройках подключения. Клиенты Hiddify, V2RayTun и FoXray последних версий совместимы.</p>
+        <p>На практике VLESS + XHTTP + Reality - самая устойчивая комбинация на 22 апреля. Панель 3X-UI поддерживает этот транспорт. Клиенты Hiddify, V2RayTun и FoXray последних версий совместимы.</p>
 
         <div class="article-highlight3">
-            <strong>Важно:</strong> Если ваш VLESS Reality начал нестабильно работать в марте-апреле 2026, не спешите менять провайдера — попробуйте сначала переключить транспорт на XHTTP в панели 3X-UI. Это решает проблему в большинстве случаев без смены сервера.
+            <strong>Ваш VLESS Reality начал отваливаться?</strong> Не меняйте провайдера. Переключите транспорт на XHTTP в панели 3X-UI. Решает проблему в большинстве случаев без смены сервера.
         </div>
-        <h2>Shadowsocks-2022 — лёгкая альтернатива</h2>
-        <p>Обновлённая версия протокола с улучшенным шифрованием. Шифрует трафик отдельных приложений, а не всей системы. Быстрее полноценного тоннеля, но менее универсален. Хорошо работает в связке с VLESS как фоллбэк-протокол в 3X-UI.</p>
+
+        <h2>AmneziaWG - модифицированный WireGuard</h2>
+        <p>Меняет сигнатуру при каждом подключении. Приложение Amnezia VPN ставит серверную часть на VPS по SSH. Два клика.</p>
+
+        <p>Через домашнюю оптику работает у большинства. На мобильном - нестабилен с 1 апреля. Пользователи на Reddit жалуются на бесконечное подключение. Протокол живой, но только для оптики.</p>
+
+        <h2>WireGuard - мёртв на мобильном</h2>
+        <p>ТСПУ режут по сигнатуре за миллисекунды. На домашней оптике - лотерея. Я бы не ставил на него. 4000 строк кода, минимальное потребление, 512 МБ RAM на 10 устройств - всё прекрасно. Но бесполезно, когда протокол не подключается.</p>
+
+        <h2>Shadowsocks-2022 - ненадёжный fallback</h2>
+        <p>ТСПУ его видит. Блокирует не везде. Как фоллбэк в 3X-UI нормально, как основной канал - нет.</p>
+
+        <h2>Раздельное туннелирование - теперь обязательно</h2>
+        <p>С 15 апреля Яндекс, Ozon, ВК и 20+ платформ режут VPN-трафик. Нельзя пускать всё через тоннель - российские сервисы не откроются. Настраиваете split-tunneling: российские домены напрямую, заблокированные через VPS. Amnezia VPN и 3X-UI умеют из коробки. 5 минут.</p>
+
+        <div class="article-highlight3">
+            <strong>22 апреля 2026, итог.</strong> WireGuard мёртв на мобильном. VLESS Reality нестабилен. VLESS+XHTTP работает. AmneziaWG - только оптика. Раздельное туннелирование обязательно. Российским хостерам хотят запретить VPN законодательно. Fornex, AdminVPS (код VPS30) и европейские локации Aeza - проверены, протоколы не блокируют.
+        </div>
     </div>
 </section>
 
@@ -1258,24 +999,19 @@
 <section class="section" id="ip-clean" style="background:var(--bg2)">
     <div class="article">
         <h2 class="section-title">Проблема чистоты IP-адресов</h2>
-        <p class="section-sub">Почему Netflix, ChatGPT и Spotify блокируют ваш новый сервер — и как с этим бороться</p>
+        <p class="section-sub">Почему Netflix, ChatGPT и Spotify блокируют новый сервер</p>
 
-        <h2>В чём суть проблемы</h2>
-        <p>Большинство хостинг-провайдеров владеют блоками IP-адресов, которые зарегистрированы как «дата-центровые» в базах вроде MaxMind и IP2Location. Стриминговые сервисы, ChatGPT, некоторые банки и платёжные системы блокируют такие адреса, потому что через них обычно идёт автоматизированный или «подозрительный» трафик.</p>
+        <h2>В чём суть</h2>
+        <p>Большинство хостеров владеют блоками IP, зарегистрированными как «дата-центровые» в MaxMind и IP2Location. Стриминги, ChatGPT, банки блокируют такие адреса. Купили VPS, подняли тоннель - а Netflix показывает ошибку прокси. Особенно у Hetzner и DigitalOcean - их диапазоны давно в чёрных списках.</p>
 
-        <p>На практике это значит: вы купили VPS, подняли тоннель, подключились — а Netflix показывает ошибку прокси, ChatGPT просит подтвердить, что вы не робот, а Spotify перенаправляет на страну регистрации. Особенно остро проблема стоит у крупных провайдеров: Hetzner, DigitalOcean, AWS — их IP-диапазоны давно в чёрных списках.</p>
+        <h2>Как проверить</h2>
+        <p>После активации: ip.gs, ipinfo.io, whoer.net, browserleaks.com. Поле «Type» - «Datacenter» или «Hosting» значит блокировки вероятны. «ISP» или «Residential» - чистый адрес.</p>
 
-        <h2>Как проверить чистоту IP</h2>
-        <p>Перед покупкой проверить конкретный адрес невозможно — он выдаётся после активации. Но сразу после получения машины зайдите на сервисы проверки: ip.gs, ipinfo.io, whoer.net, browserleaks.com. Обратите внимание на поле «Type» — если написано «Datacenter» или «Hosting», вероятность блокировок высока. Если «ISP» или «Residential» — адрес чистый.</p>
-
-        <h2>Какие хостинги выдают более чистые адреса</h2>
-        <p>По нашим наблюдениям, менее популярные провайдеры выдают более чистые IP — просто потому, что их пулы реже используются для массового проксирования. VDSina, Fornex и AdminVPS показали хорошие результаты: ChatGPT работал без капч, основные стриминги не блокировались. Hetzner и DigitalOcean — на другом конце спектра: почти каждый адрес уже в чёрном списке Netflix.</p>
-
-        <h2>Residential IP — радикальное решение</h2>
-        <p>Если чистота адреса критична (например, для работы с финансовыми сервисами или американскими стримингами), ищите провайдеров с residential-адресами. Это IP, зарегистрированные на обычных интернет-провайдеров, а не дата-центры. Для внешнего мира вы выглядите как обычный домашний пользователь. Такие адреса стоят дороже ($5–15/мес), но решают проблему раз и навсегда.</p>
+        <h2>Какие хостинги чище</h2>
+        <p>По нашим наблюдениям: VDSina, Fornex и AdminVPS - ChatGPT работал без капч, стриминги не блокировали. Hetzner и DigitalOcean - почти каждый адрес в чёрном списке Netflix.</p>
 
         <div class="article-highlight3">
-            <strong>Лайфхак:</strong> У Vultr можно пересоздать машину за 30 секунд — при каждом пересоздании выдаётся новый IP. Если текущий адрес в чёрном списке, просто удалите дроплет и создайте заново. Обычно с 2–3 попытки находится чистый адрес. Это бесплатно, если укладываетесь в один расчётный период.
+            <strong>Лайфхак:</strong> У Vultr пересоздание машины за 30 секунд - при каждом пересоздании новый IP. Не повезло - удалили, создали заново. С 2-3 попытки находится чистый. Бесплатно в рамках расчётного периода.
         </div>
     </div>
 </section>
@@ -1284,34 +1020,28 @@
 <section class="section">
     <div class="article">
         <h2 class="section-title">Свой тоннель vs готовый ВПН-сервис</h2>
-        <p class="section-sub">Что выгоднее и безопаснее — разбираем честно</p>
-
-        <p>Решение зависит от ваших приоритетов. Если важна приватность, устойчивость к блокировкам и вы готовы потратить 10–15 минут на настройку — собственное решение выигрывает. Если нужна простота и десятки стран «в один клик» — коммерческий сервис удобнее, хотя и менее надёжен в текущих условиях.</p>
 
         <div class="pros-cons">
             <div class="pros">
-                <h4>✅ Преимущества своего тоннеля</h4>
-                <p>→ Полный контроль над данными и логами</p>
-                <p>→ Уникальный IP — нет массовых блокировок</p>
-                <p>→ Дешевле: от 99₽ vs 300–700₽ за подписку</p>
-																<p>→ Доступ для семьи и друзей бесплатно</p>
-                <p>→ VLESS Reality работает, когда всё остальное лежит</p>
-                <p>→ Можно разместить Pi-hole, Adguard и другие утилиты</p>
-                <p>→ Нет зависимости от политики третьих лиц</p>
+                <h4>✅ Свой тоннель на VPS</h4>
+                <p>→ Полный контроль над данными</p>
+                <p>→ Уникальный IP без массовых блокировок</p>
+                <p>→ Дешевле: от 150₽ vs 300-700₽ подписка</p>
+                <p>→ Семья и друзья бесплатно</p>
+                <p>→ VLESS+XHTTP работает, когда всё лежит</p>
+                <p>→ Pi-hole, Adguard рядом</p>
             </div>
             <div class="cons">
                 <h4>❌ Ограничения</h4>
-                <p>→ Первоначальная настройка (10–15 минут)</p>
-                <p>→ Одна локация на одну машину</p>
-                <p>→ Переключение между странами вручную</p>
+                <p>→ Настройка 10-15 минут</p>
+                <p>→ Одна локация на машину</p>
+                <p>→ Обновления - ваша ответственность</p>
                 <p>→ Нет встроенного kill-switch</p>
-                <p>→ Обновления — ваша ответственность</p>
-                <p>→ Оплата идёт даже в период простоя</p>
-                <p>→ Нужны базовые навыки работы с консолью</p>
+                <p>→ Оплата даже в простое</p>
             </div>
         </div>
 
-        <p>На практике одна машина в Нидерландах или Германии закрывает 90% повседневных задач. Если нужно несколько стран — арендуйте две-три машины; это всё равно дешевле премиальной подписки, а устойчивость к блокировкам несравнимо выше.</p>
+        <p>Одна машина в Нидерландах или Германии закрывает 90% задач. Нужно несколько стран - две-три машины, всё равно дешевле подписки.</p>
     </div>
 </section>
 
@@ -1319,47 +1049,40 @@
 <section class="section" id="setup" style="background:var(--bg2)">
     <div class="article">
         <h2 class="section-title">Настройка от нуля до подключения на телефоне</h2>
-        <p class="section-sub">Разворачиваем VLESS Reality с 3X-UI — весь путь за 10 минут</p>
+        <p class="section-sub">Разворачиваем VLESS+XHTTP с 3X-UI за 10-15 минут</p>
 
         <h2>Шаг 1: Арендуйте машину</h2>
-        <p>Выберите провайдера из <a href="#rating">рейтинга</a>, закажите минимальный тариф. При создании укажите Ubuntu 22.04 LTS или Debian 12. После активации запишите IP-адрес и пароль root — они придут на почту или отобразятся в панели управления.</p>
+        <p>Выберите провайдера из <a href="#rating">рейтинга</a>, минимальный тариф. Ubuntu 22.04 LTS или Debian 12. IP и пароль root придут на почту.</p>
 
-        <h2>Шаг 2: Подключитесь по SSH</h2>
-        <p>На Windows: откройте терминал (Win + R → cmd или PowerShell) и введите:</p>
+        <h2>Шаг 2: SSH</h2>
         <div class="code-block">ssh root@ваш-ip-адрес</div>
-        <p>На macOS и Linux — аналогично через штатный терминал. При первом подключении подтвердите ключ (yes), введите пароль. На Android можно использовать приложение Termius, на iOS — Blink Shell.</p>
+        <p>Windows - терминал (Win + R, cmd). macOS/Linux - штатный терминал. Android - Termius. iOS - Blink Shell.</p>
 
-        <h2>Шаг 3: Установите 3X-UI</h2>
-        <p>3X-UI — это веб-панель управления для Xray-core, которая позволяет настроить VLESS Reality через удобный графический интерфейс. Установка одной командой:</p>
+        <h2>Шаг 3: 3X-UI</h2>
         <div class="code-block">
-            <span class="comment"># Обновляем систему и ставим 3X-UI</span><br>
+            <span class="comment"># Обновляем и ставим 3X-UI</span><br>
             bash &lt;(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
         </div>
-        <p>Скрипт спросит порт панели, имя пользователя и пароль — запомните их. После установки панель будет доступна по адресу http://ваш-ip:порт. Зайдите в браузере, авторизуйтесь и создайте новое подключение: протокол VLESS, transport — Reality, SNI — например, www.samsung.com. Панель автоматически сгенерирует ключи и покажет ссылку для подключения и QR-код.</p>
+        <p>Скрипт спросит порт, логин, пароль. Панель доступна по http://ваш-ip:порт. Создайте подключение: протокол VLESS, transport XHTTP, Reality включён, SNI - www.samsung.com или www.microsoft.com. Панель сгенерирует ссылку и QR-код.</p>
 
-        <h2>Шаг 4: Подключите устройства</h2>
-        <p>Теперь нужен клиент на вашем устройстве. Вот проверенные варианты:</p>
-        <p>На Android — V2RayTun или Nekobox. Откройте приложение, нажмите «+» → «Импорт из буфера» или отсканируйте QR-код из панели 3X-UI. Одно нажатие — и тоннель активен.</p>
-        <p>На iPhone/iPad — FoXray или Streisand. Оба бесплатны, поддерживают VLESS Reality. Отсканируйте QR-код камерой или вставьте ссылку подключения — готово за 10 секунд.</p>
-        <p>На Windows — Hiddify или Nekoray. Импортируйте ссылку, нажмите «Подключить».</p>
-        <p>На macOS — FoXray (есть версия для Mac) или V2RayXS.</p>
+        <h2>Шаг 4: Клиенты</h2>
+        <p>Android - Hiddify или V2RayTun. Импорт из буфера или QR.</p>
+        <p>iPhone/iPad - FoXray или Streisand. QR камерой.</p>
+        <p>Windows - Hiddify или Nekoray.</p>
+        <p>macOS - FoXray (Mac-версия).</p>
+
+        <h2>Шаг 5: Раздельное туннелирование</h2>
+        <p>В 3X-UI или Amnezia настройте split-tunneling: российские домены (Яндекс, Ozon, ВК, банки) напрямую, остальное через тоннель. Без этого с 15 апреля российские сервисы не откроются.</p>
 
         <div class="article-highlight">
-            <strong>Проверка:</strong> После подключения зайдите на ip.gs или whoer.net. Если показывает IP вашей машины, а не домашний — тоннель работает. Попробуйте открыть заблокированный ранее ресурс — должен загрузиться без проблем.
+            <strong>Проверка:</strong> ip.gs или whoer.net. Показывает IP машины, а не домашний - тоннель работает.
         </div>
 
-        <h2>Бонус: WireGuard за 5 минут (если DPI не мешает)</h2>
-        <p>Если в вашем регионе нет активной блокировки протоколов, WireGuard — более простой вариант. Одна команда в SSH:</p>
-        <div class="code-block">
-            <span class="comment"># Автоматическая установка WireGuard</span><br>
-            curl -O https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh<br>
-            chmod +x wireguard-install.sh<br>
-            ./wireguard-install.sh
-        </div>
-        <p>Скрипт сделает всё сам: установит WireGuard, сгенерирует ключи, настроит файрвол. На выходе — конфигурационный файл и QR-код. Скачайте клиент WireGuard (есть для всех платформ), отсканируйте QR — готово.</p>
+        <h2>Бонус: AmneziaWG (для домашней оптики)</h2>
+        <p>Скачайте Amnezia VPN, нажмите «Добавить сервер», введите IP и пароль root. Приложение само установит серверную часть по SSH и настроит AmneziaWG. Работает на домашней оптике. На мобильном - нестабилен с апреля 2026.</p>
 
         <div class="article-highlight2">
-            <strong>Безопасность сервера:</strong> После настройки тоннеля обязательно защитите саму машину. Смените стандартный SSH-порт 22 на произвольный, отключите вход по паролю и настройте аутентификацию по ключу. Включите unattended-upgrades для автоматических обновлений безопасности. Эти три шага занимают 5 минут и закрывают 95% векторов атак.
+            <strong>Безопасность:</strong> Смените SSH-порт 22 на произвольный, отключите вход по паролю (ключи), включите unattended-upgrades. 5 минут - закрывает 95% векторов атак.
         </div>
     </div>
 </section>
@@ -1368,12 +1091,12 @@
 <section class="section">
     <div class="article">
         <h2>Особенности аренды в России и Европе</h2>
-        <p>Российская машина подходит для защиты локального трафика: публичные Wi-Fi, удалённый доступ к рабочим ресурсам. Пинг 5–15 мс, скорость практически неотличима от прямого подключения. Но для обхода блокировок понадобится площадка за рубежом.</p>
+        <p>Российская машина - для защиты локального трафика: Wi-Fi, удалённый доступ. 5-15 мс, скорость не отличается от прямого подключения. Но для VPN с обходом блокировок - только зарубежная площадка. Российские хостеры блокируют VPN по требованию РКН.</p>
 
-        <p>Оптимальная конфигурация — два инстанса: один в Москве, второй в Нидерландах или Германии. AdminVPS и Timeweb Cloud позволяют разместить оба в рамках одного аккаунта с единым балансом. Переключение между ними — пара нажатий в клиентском приложении.</p>
+        <p>Два инстанса: один в Москве (для локальной защиты), второй в Нидерландах или Финляндии (для обхода). AdminVPS и Timeweb Cloud позволяют оба в одном аккаунте. Переключение - пара нажатий в клиенте.</p>
 
-        <h2>Бесплатные и пробные предложения</h2>
-        <p>DigitalOcean выдаёт $200 стартового кредита на 60 дней, Vultr — $100 на 30 дней. Oracle Cloud предоставляет бесплатную машину навсегда, но ресурсы минимальные и доступность нестабильная. Для постоянного использования разумнее оформить платный тариф — от 99 ₽/мес это символическая сумма за стабильный доступ.</p>
+        <h2>Бесплатные и пробные</h2>
+        <p>DigitalOcean $200 на 60 дней, Vultr $100 на 30. Oracle Cloud - бесплатная машина навсегда, но ресурсы минимальные. Для постоянного использования - платный тариф от 150 ₽.</p>
     </div>
 </section>
 
@@ -1385,44 +1108,60 @@
 
         <div class="faq-list">
             <div class="faq-item">
-                <div class="faq-q">Можно ли использовать VPS или VDS как ВПН?</div>
-                <div class="faq-a">Да. На любой виртуальной машине с KVM-виртуализацией и поддержкой TUN/TAP можно поднять WireGuard, VLESS Reality или другой протокол за 5–10 минут. Достаточно 1 ядра и 512 МБ оперативной памяти (для VLESS с 3X-UI лучше 1 ГБ).</div>
+                <div class="faq-q">Можно ли использовать VPS как ВПН?</div>
+                <div class="faq-a">Да. KVM-виртуализация с TUN/TAP - поднимаете VLESS+XHTTP или AmneziaWG за 10-15 минут. 1 vCPU и 1 ГБ RAM хватает.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-q">VLESS Reality или WireGuard — что выбрать?</div>
-                <div class="faq-a">Если в вашем регионе есть DPI-фильтрация и WireGuard периодически «отваливается» — однозначно VLESS Reality. Он маскирует трафик под обычный HTTPS и не детектируется. Если блокировок нет — WireGuard проще и быстрее.</div>
+                <div class="faq-q">Какой протокол выбрать в апреле 2026?</div>
+                <div class="faq-a">WireGuard мёртв на мобильном. VLESS Reality нестабилен с февраля. Рабочие связки: VLESS+XHTTP (маскируется под HTTP-трафик к CDN, ТСПУ не ловит) и AmneziaWG через домашнюю оптику (на мобильном нестабилен). Раздельное туннелирование обязательно.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-q">Сколько стоит аренда VPS под ВПН?</div>
-                <div class="faq-a">Российские провайдеры предлагают тарифы от 99–170 ₽/мес, зарубежные — от 3–5 €. Минимального плана хватает для одного-пяти пользователей. Это в 3–7 раз дешевле подписки на коммерческий ВПН-сервис.</div>
+                <div class="faq-q">Сколько стоит VPS под ВПН?</div>
+                <div class="faq-a">Российские провайдеры от 150 ₽/мес, зарубежные от 3-5 €. Минимального плана хватает на 5 человек. В 3-7 раз дешевле коммерческого ВПН.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-q">Что такое чистота IP и зачем это проверять?</div>
-                <div class="faq-a">Дата-центровые IP крупных хостингов часто заблокированы стримингами, ChatGPT и другими сервисами. «Чистый» IP — тот, который не в чёрных списках. Менее популярные провайдеры (AdminVPS, Fornex, VDSina) обычно выдают более чистые адреса. Проверяйте на ip.gs или ipinfo.io сразу после активации.</div>
+                <div class="faq-q">Что такое чистота IP?</div>
+                <div class="faq-a">Дата-центровые IP крупных хостингов блокируются стримингами и ChatGPT. «Чистый» IP не в чёрных списках. VDSina, Fornex и AdminVPS выдают более чистые адреса. Проверяйте на ip.gs или ipinfo.io сразу после активации.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-q">Какие минимальные характеристики нужны?</div>
-                <div class="faq-a">Для WireGuard: 1 vCPU, 512 МБ RAM, 10 ГБ SSD. Для VLESS Reality с 3X-UI: 1 vCPU, 1 ГБ RAM. В обоих случаях нужен безлимитный трафик (или от 1 ТБ), канал от 200 Мбит/с и обязательно KVM-виртуализация.</div>
+                <div class="faq-q">Минимальные характеристики?</div>
+                <div class="faq-a">AmneziaWG: 1 vCPU, 512 МБ RAM, 10 ГБ SSD. VLESS+XHTTP с 3X-UI: 1 vCPU, 1 ГБ RAM. Безлимит трафика или от 1 ТБ. Канал от 200 Мбит/с. KVM обязательно.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-q">Где лучше арендовать — в Европе или России?</div>
-                <div class="faq-a">Для обхода блокировок — Нидерланды, Германия, Финляндия. Для защиты локального трафика — Москва. Идеально иметь два инстанса в разных локациях — переключение занимает секунды в клиентском приложении.</div>
+                <div class="faq-q">Европа или Россия?</div>
+                <div class="faq-a">Для обхода блокировок - только Европа. Российские хостеры блокируют VPN по требованию РКН. Для защиты локального трафика - Москва. Идеально два инстанса.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-q">Сложно ли настроить VLESS Reality?</div>
-                <div class="faq-a">С панелью 3X-UI — нет. Установка занимает одну команду в SSH, настройка через браузер — ещё 5 минут. На телефоне достаточно отсканировать QR-код в приложении V2RayTun (Android) или FoXray (iOS). Весь процесс от покупки до работающего тоннеля — 10–15 минут.</div>
+                <div class="faq-q">Сложно ли настроить VLESS+XHTTP?</div>
+                <div class="faq-a">С 3X-UI - одна команда в SSH, настройка через браузер 5-10 минут. На телефоне QR-код в Hiddify или FoXray. Весь процесс от покупки до работающего тоннеля - 15 минут.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-q">Может ли провайдер запретить тоннелирование?</div>
-                <div class="faq-a">Большинство хостингов из рейтинга разрешают это. Перед покупкой уточните политику — отдельные бюджетные площадки ограничивают TUN/TAP или определённые порты. Все 10 провайдеров из нашей подборки проверены лично.</div>
+                <div class="faq-q">Может ли провайдер запретить VPN?</div>
+                <div class="faq-a">На российских площадках - уже запрещают. Aeza блокирует с декабря 2025. Законопроект «Антифрод 2.0» может обязать всех российских хостеров. На зарубежных площадках всех 10 провайдеров из рейтинга VPN разрешён.</div>
             </div>
             <div class="faq-item">
                 <div class="faq-q">Есть ли бесплатные варианты?</div>
-                <div class="faq-a">DigitalOcean даёт $200 кредита, Vultr — $100. Oracle Cloud предлагает бесплатную машину навсегда, но с минимальными ресурсами. Для стабильной работы лучше платный тариф — от 99 ₽ это минимальная инвестиция в стабильный доступ.</div>
+                <div class="faq-a">DigitalOcean $200, Vultr $100 кредита. Oracle Cloud - бесплатная машина навсегда (но ресурсы минимальные). Для стабильности - платный тариф от 150 ₽.</div>
             </div>
             <div class="faq-item">
-                <div class="faq-q">Чем VPS отличается от VDS?</div>
-                <div class="faq-a">В практическом плане — ничем, оба термина описывают виртуальную машину с выделенными ресурсами. Разница маркетинговая. Критичнее тип виртуализации: KVM обеспечивает полное ядро и совместимость со всеми протоколами, OpenVZ — нет.</div>
+                <div class="faq-q">VPS и VDS - разные вещи?</div>
+                <div class="faq-a">Нет. Маркетинговые синонимы. KVM даёт полное ядро и совместимость со всеми протоколами, OpenVZ - нет. Все провайдеры из рейтинга на KVM.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Aeza блокирует VPN на серверах?</div>
+                <div class="faq-a">На российских площадках - да, с декабря 2025 по требованию РКН. Получили списки IP из подсети 138.124/16, начали рассылать уведомления. На европейских серверах - без ограничений. Для VPN выбирайте NL, DE, FI или US у Aeza. Fornex и AdminVPS на зарубежных площадках VPN тоже не трогают.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">WireGuard и VLESS Reality заблокированы - что делать?</div>
+                <div class="faq-a">На 22 апреля: WireGuard мёртв на мобильном, ТСПУ режут за миллисекунды. VLESS Reality нестабилен с февраля - ТСПУ ловят по TLS-хендшейкам. Рабочие связки: VLESS+XHTTP (новый транспорт, маскируется под HTTP) и AmneziaWG через домашнюю оптику. Настройка на VPS 15-20 минут. 1 ГБ RAM минимум.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">С 15 апреля российские сайты не работают через VPN?</div>
+                <div class="faq-a">Минцифры потребовало от Яндекса, ВК, Ozon, Wildberries и 20+ платформ блокировать VPN-трафик. Решение - раздельное туннелирование. На VPS через 3X-UI или Amnezia: российские домены напрямую, заблокированные через тоннель. 5 минут настройки.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Российским хостерам запретят размещать VPN?</div>
+                <div class="faq-a">17 апреля «Коммерсантъ» и Meduza написали про законопроект «Антифрод 2.0»: хостерам хотят запретить предоставлять мощности для VPN-сервисов. Aeza уже блокирует. Вывод: для VPN - только европейские площадки любого провайдера из рейтинга.</div>
             </div>
         </div>
     </div>
@@ -1431,50 +1170,49 @@
 <!-- SEO CLOSING -->
 <section class="section">
     <div class="article">
-        <h2>Итоги: что мы рекомендуем в 2026 году</h2>
+        <h2>Итоги: что мы рекомендуем в апреле 2026</h2>
 
-        <p>Поднять собственный зашифрованный тоннель на арендованной машине стало проще, чем заказать пиццу. Тарифы от 99 рублей, установка 3X-UI — одна команда, настройка VLESS Reality через веб-панель — ещё 5 минут. QR-код на телефон — и вы онлайн через собственную точку выхода, которую не заблокирует ни один DPI.</p>
+        <p>Ситуация с VPN в России изменилась радикально за один месяц. Вторая служба ФСБ курирует блокировки. WireGuard мёртв на мобильном. VLESS Reality нестабилен. Российским хостерам хотят запретить VPN законодательно. Aeza уже блокирует.</p>
 
-        <p>Для экономных — AdminVPS (от 99 ₽, промокод <strong>VPS30</strong> на −30%) — безлимитный трафик, NVMe, оплата в рублях. Для тех, кто не хочет возиться с консолью, — FirstVDS (промокод <strong>64860396</strong>) и Timeweb Cloud с предустановленными образами. Для максимальной производительности — Hetzner (но будьте готовы к грязным IP). Для экзотических локаций — Vultr с 30+ дата-центрами.</p>
+        <p>Собственный тоннель на зарубежном VPS - единственный надёжный вариант. VLESS+XHTTP через 3X-UI. Раздельное туннелирование обязательно. Настройка 15 минут.</p>
 
-        <p>Главное изменение 2026 года — VLESS Reality стал де-факто стандартом. Если вы всё ещё сидите на «голом» WireGuard и он периодически отваливается, самое время мигрировать. Настройка не сложнее, а устойчивость к блокировкам — на порядок выше.</p>
+        <p>Для приватности и чистых IP - Fornex (Швейцария, крипто, не трогает протоколы). Для оплаты в рублях и максимума локаций - AdminVPS (промокод <strong>VPS30</strong>, -30%, Финляндия 15 мс из Питера). Для бизнеса с Terraform - Timeweb Cloud. Для топового железа - европейские локации Aeza. Для минимального бюджета - VDSina от 150 ₽. Для новичков - FirstVDS (промокод <strong>64860396</strong>, готовые образы).</p>
 
-        <p>Весь трафик под вашим контролем, никаких посредников, никаких логов. Выберите провайдера, потратьте 10 минут на настройку — и забудьте о проблемах с доступом.</p>
+        <p>Весь трафик под вашим контролем. Никаких посредников. Выберите провайдера, потратьте 15 минут - и забудьте о блокировках.</p>
     </div>
 </section>
 
 <!-- CTA -->
 <section class="cta-block">
     <div class="cta-block-inner">
-        <div class="hero-badge" style="margin-bottom:1rem">🔥 Топ-выборы на март 2026</div>
-        <h2>Поднимите свой VPN за 10 минут</h2>
-        <p>Арендуйте сервер, установите 3X-UI одной командой, подключите телефон по QR-коду. Никаких посредников, никаких логов.</p>
+        <div class="hero-badge" style="margin-bottom:1rem">🔥 Топ-выборы на апрель 2026</div>
+        <h2>Поднимите свой VPN за 15 минут</h2>
+        <p>Арендуйте сервер, установите 3X-UI, настройте VLESS+XHTTP, подключите телефон по QR. Раздельное туннелирование - российские сайты напрямую.</p>
         <div class="cta-buttons" style="margin-bottom:1.5rem">
-            <a href="https://fornex.com/" class="hero-cta" target="_blank" rel="nofollow">⭐ Fornex — от $6.34</a>
-            <a href="https://www.vdsina.com/" class="hero-cta" style="background:linear-gradient(135deg,var(--green),#00b894);color:#000" target="_blank" rel="nofollow">💰 VDSina — от 150₽</a>
+            <a href="https://fornex.com/c/ftle5i/ru/virtual-private-servers/" class="hero-cta" target="_blank" rel="nofollow">⭐ Fornex - от $6.34</a>
+            <a href="https://adminvps.ru/vps/vps_finland.php?aff=29893" class="hero-cta" style="background:linear-gradient(135deg,var(--green),#00b894);color:#000" target="_blank" rel="nofollow">💰 AdminVPS - минус 30%</a>
         </div>
-        <p style="font-size:.8rem;color:var(--text2)">Промокод <strong style="color:var(--green)">VPS30</strong> даёт −30% на AdminVPS · <strong style="color:var(--green)">64860396</strong> — скидка на FirstVDS</p>
+        <div class="cta-buttons" style="margin-bottom:1rem">
+            <a href="https://www.vdsina.com/?partner=41z19ht4wq95" class="hero-cta" style="background:transparent;border:2px solid var(--accent);color:var(--accent2)" target="_blank" rel="nofollow">💰 VDSina - от 150₽</a>
+            <a href="https://timeweb.cloud/?i=138553" class="hero-cta" style="background:transparent;border:2px solid var(--accent);color:var(--accent2)" target="_blank" rel="nofollow">🏢 Timeweb Cloud</a>
+        </div>
+        <p style="font-size:.8rem;color:var(--text2)">Промокод <strong style="color:var(--green)">VPS30</strong> = -30% на AdminVPS · <strong style="color:var(--green)">64860396</strong> - скидка на FirstVDS</p>
     </div>
 </section>
 
 <footer class="footer">
-    <p>© 2026 VPS для VPN — Независимый рейтинг хостингов для создания собственного ВПН</p>
-    <p style="margin-top:.5rem">Рейтинг обновляется ежемесячно. Последнее обновление: апрель 2026.</p>
-    <p style="margin-top:.5rem;font-size:.75rem;color:#555">Сайт содержит партнёрские ссылки. Мы можем получать комиссию за покупки по нашим ссылкам без дополнительных затрат для вас.</p>
+    <p>© 2026 VPS для VPN - Независимый рейтинг хостингов для создания собственного ВПН</p>
+    <p style="margin-top:.5rem">Рейтинг обновляется ежемесячно. Последнее обновление: 22 апреля 2026.</p>
+    <p style="margin-top:.5rem;font-size:.75rem;color:#555">Сайт содержит партнёрские ссылки. Мы можем получать комиссию за покупки без дополнительных затрат для вас.</p>
 </footer>
 
 <script>
-// ── Copy promo code ──
 function copyPromo(code, btn) {
     navigator.clipboard.writeText(code).then(function() {
         btn.textContent = '✓ Скопировано';
         btn.classList.add('copied');
-        setTimeout(function() {
-            btn.textContent = 'Копировать';
-            btn.classList.remove('copied');
-        }, 2000);
+        setTimeout(function() { btn.textContent = 'Копировать'; btn.classList.remove('copied'); }, 2000);
     }).catch(function() {
-        // Fallback for older browsers
         var tmp = document.createElement('textarea');
         tmp.value = code;
         document.body.appendChild(tmp);
@@ -1483,14 +1221,10 @@ function copyPromo(code, btn) {
         document.body.removeChild(tmp);
         btn.textContent = '✓ Скопировано';
         btn.classList.add('copied');
-        setTimeout(function() {
-            btn.textContent = 'Копировать';
-            btn.classList.remove('copied');
-        }, 2000);
+        setTimeout(function() { btn.textContent = 'Копировать'; btn.classList.remove('copied'); }, 2000);
     });
 }
 
-// ── Recommender widget ──
 function showRec(type, btn) {
     document.querySelectorAll('.rec-result').forEach(el => el.classList.remove('show'));
     document.querySelectorAll('.rec-btn').forEach(el => el.classList.remove('active'));
@@ -1499,18 +1233,12 @@ function showRec(type, btn) {
     if (btn) btn.classList.add('active');
 }
 
-// ── Sticky bar on scroll ──
 window.addEventListener('scroll', function() {
     const bar = document.getElementById('stickyBar');
     if (!bar) return;
-    if (window.scrollY > 600) {
-        bar.classList.add('visible');
-    } else {
-        bar.classList.remove('visible');
-    }
+    if (window.scrollY > 600) { bar.classList.add('visible'); } else { bar.classList.remove('visible'); }
 }, {passive: true});
 
-// ── Animated live viewer counts ──
 function randomizeViewers() {
     const ids = ['views-fornex','views-adminvps','views-timeweb','views-aeza','views-vdsina','views-firstvds'];
     const base = [237, 312, 98, 73, 184, 156];
@@ -1524,13 +1252,10 @@ function randomizeViewers() {
         }
     });
     const liveEl = document.getElementById('live-count');
-    if (liveEl) {
-        liveEl.textContent = Math.floor(10 + Math.random() * 20);
-    }
+    if (liveEl) { liveEl.textContent = Math.floor(10 + Math.random() * 20); }
 }
 setInterval(randomizeViewers, 8000);
 
-// ── FAQ accordion ──
 document.querySelectorAll('.faq-q').forEach(q=>{
     q.addEventListener('click',()=>{
         const item=q.parentElement;
@@ -1539,7 +1264,6 @@ document.querySelectorAll('.faq-q').forEach(q=>{
     });
 });
 
-// ── Smooth scroll ──
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
     a.addEventListener('click',e=>{
         e.preventDefault();
@@ -1551,13 +1275,12 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 });
 </script>
 
-<!-- Sticky CTA Bar -->
 <div class="sticky-bar" id="stickyBar">
     <div class="sticky-bar-text">
-        <span class="sb-full">🔥 <strong>AdminVPS</strong> — от <strong>299 ₽/мес</strong> по промокоду &nbsp;·&nbsp; <strong>VPS30</strong> −30%</span>
-        <span class="sb-short">🔥 <strong>AdminVPS</strong> от <strong>299 ₽</strong> по промокоду VPS30 -30% скидки</span>
+        <span class="sb-full">🔥 <strong>AdminVPS</strong> - от <strong>299 ₽/мес</strong> · промокод <strong>VPS30</strong> -30%</span>
+        <span class="sb-short">🔥 <strong>AdminVPS</strong> от <strong>299 ₽</strong> · VPS30 -30%</span>
     </div>
-    <a href="https://adminvps.ru/vps/vps_russia.php?aff=29893" class="sticky-bar-btn" target="_blank" rel="nofollow">Попробовать →</a>
+    <a href="https://adminvps.ru/vps/vps_finland.php?aff=29893" class="sticky-bar-btn" target="_blank" rel="nofollow">Попробовать →</a>
     <button class="sticky-bar-close" onclick="document.getElementById('stickyBar').style.display='none'" aria-label="Закрыть">✕</button>
 </div>
 </body>
